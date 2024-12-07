@@ -1,7 +1,15 @@
-SELECT 
-    COUNT(employee_id),
+SELECT
+    employee_id,
+    full_name,
     department,
-    level
-FROM employees
-WHERE remote_work_ratio > 30
-GROUP BY department, level;
+    EXTRACT(YEAR FROM AGE(CURRENT_DATE, hire_date)) AS years_in_role
+FROM (  
+    SELECT
+        employee_id,
+        full_name,
+        department,
+        hire_date,
+        ROW_NUMBER() OVER (PARTITION BY department ORDER BY hire_date ASC) AS rank
+    FROM employees
+) AS ranked_employees
+WHERE rank <= 5;

@@ -28,4 +28,24 @@ WHERE remote_work_ratio > 30
 GROUP BY department, level
 --ANSWER: the range is 36-75 as count from all 10 departments
 
--- Question 5: 
+-- Question 5: Sort employees by their `hire_date` in ascending order.
+"I'm thinking of taking it up a notch:
+Identify the top 5 oldest employees (based on hire_date) in each department,
+along with their years_in_role (calculated as the difference between hire_date and current date)."
+SELECT
+    employee_id,
+    full_name,
+    department,
+    EXTRACT(YEAR FROM AGE(CURRENT_DATE, hire_date)) AS years_in_role
+FROM (  
+    SELECT
+        employee_id,
+        full_name,
+        department,
+        hire_date,
+        ROW_NUMBER() OVER (PARTITION BY department ORDER BY hire_date ASC) AS rank
+    FROM employees
+) AS ranked_employees
+WHERE rank <= 5;
+-- ANSWER: 12 is the highest in all dept.
+
