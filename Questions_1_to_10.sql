@@ -1,3 +1,10 @@
+"""
+NOTE: the doctrings below few questions are the up'ed version of each question
+I've felt few were a bit bland or 'not so insightful' and gave them my own spin! 😅
+"""
+
+
+
 --Question 1:Retrieve all employees hired in the last 12 months.
 
 SELECT employee_id,full_name,hire_date 
@@ -117,3 +124,50 @@ WHERE department = 'Engineering Delivery' AND actual_utilization > 80
       WHERE department = employees.department
   )
 GROUP BY department;
+
+-- Question 10: Count the number of certifications held by employees in each department.
+"""
+Identify the department and position combinations with the highest
+total certifications by calculating the total certifications held,
+the total employees in each combination, and the average certifications
+per employee. Rank the results by the total certifications in descending order.
+"""
+SELECT
+    department,
+    position,
+    level,
+    SUM(array_length(string_to_array(certifications, ','), 1)) AS total_certifications,
+    COUNT(employee_id) AS total_employees,
+    ROUND(SUM(array_length(string_to_array(certifications, ','), 1))::NUMERIC / COUNT(employee_id), 2) AS avg_certifications_per_employee
+FROM employees
+GROUP BY department, position, level
+ORDER BY total_certifications DESC;
+
+
+-- Question 11: Identify employees in each department and position with a `flight_risk` greater than 50% and an `engagement_score` below 5.
+"""
+Identify the departments with the highest proportion of disengaged employees
+(engagement_score < 6) who are also at risk of leaving (flight_risk > 50%).
+For each department, calculate the percentage of disengaged employees relative
+to the total employees, the total number of disengaged employees with high flight
+risk, and rank the departments by the percentage of disengaged employees
+in descending order.
+"""
+/*original question query:
+SELECT
+  department,
+  position,
+  employee_id,
+  full_name
+FROM employees
+WHERE flight_risk > 50 AND engagement_score < 5
+GROUP BY department, position, employee_id;
+*/
+SELECT
+    department,
+    position,
+    COUNT(employee_id) AS total_employees,
+    SUM(CASE WHEN flight_risk > 50 AND engagement_score < 6 THEN 1 ELSE 0 END) AS disengaged_with_high_flight_risk
+FROM employees
+GROUP BY department, position
+ORDER BY disengaged_with_high_flight_risk DESC;
