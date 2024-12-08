@@ -58,4 +58,17 @@ FROM employees
 WHERE region = 'APAC'
 ORDER BY billing_rate DES LIMIT 5;
 
--- Quesiton 7: 
+-- Quesiton 7: Retrieve all employees with `actual_utilization` below 70%.
+"""
+Find the employees with actual_utilization below 70%
+whose performance_score is greater than 4 and group them by department, 
+showing the count of such employees per department.
+"""
+SELECT
+    COUNT(employee_id),
+    department,
+FROM employees
+where actual_utilization < 70 AND performance_score > 4
+GROUP BY department;
+
+-- Question 8: 

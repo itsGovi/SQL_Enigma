@@ -109,3 +109,6 @@ These questions focus on predictive analysis, trend forecasting, and holistic in
 ---
 
 This totals  **90 progressive questions** , ensuring realistic SQL practice aligned with both day-to-day reporting and advanced analytical scenarios. Let me know if you'd like further tweaks!
+
+
+make the question 5 a bit more hard -> increase the learning curve on that question and give me the updated version of it
