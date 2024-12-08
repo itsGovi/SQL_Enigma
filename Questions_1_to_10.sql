@@ -47,5 +47,15 @@ FROM (
     FROM employees
 ) AS ranked_employees
 WHERE rank <= 5;
--- ANSWER: 12 is the highest in all dept.
+-- ANSWER: 12 - the highest in all dept.
 
+-- Question 6: Find the top 5 employees with the highest `billing_rate` in the `APAC` region.
+SELECT
+    employee_id,
+    full_name,
+    department
+FROM employees
+WHERE region = 'APAC'
+ORDER BY billing_rate DES LIMIT 5;
+
+-- Quesiton 7: 
