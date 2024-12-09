@@ -1,12 +1,6 @@
 SELECT
-  employee_id,
-  full_name,
-  department,
-  travel_percentage
-FROM employees e
-WHERE travel_percentage > (
-  SELECT AVG(travel_percentage)
-  FROM employees
-  WHERE department = e.department
-)
-ORDER BY travel_percentage DESC;
+  COUNT(employee_id) AS total_employees,
+  primary_specialization,
+  AVG(experie)
+FROM employees
+GROUP BY primary_specialization;

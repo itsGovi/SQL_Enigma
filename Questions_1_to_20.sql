@@ -211,6 +211,54 @@ LIMIT 25;
 
 
 --Question 13: Retrieve the details of employees whose `travel_percentage` exceeds the department average.
-"""
+SELECT
+  employee_id,
+  full_name,
+  department,
+  travel_percentage
+FROM employees e
+WHERE travel_percentage > (
+  SELECT AVG(travel_percentage)
+  FROM employees
+  WHERE department = e.department
+)
+ORDER BY travel_percentage DESC LIMIT 50;
 
+
+-- Question 14: Identify employees with no `direct_reports`.
+SELECT
+  e.employee_id,
+  e.full_name,
+  e.department,
+  e.position
+FROM employees e
+LEFT JOIN employees m ON e.employee_id = m.manager_id
+WHERE m.manager_id IS NULL;
+
+
+--Question 15: Rank employees by `delivery_quality` within their departments.
+SELECT
+  employee_id,
+  full_name,
+  department,
+  delivery_quality,
+  RANK() OVER (PARTITION BY department ORDER BY delivery_quality DESC) AS rank
+FROM employees
+WHERE department = 'Design & UX' --choose any dept of your desire
+ORDER BY department, rank LIMIT 10;
+
+
+-- Question 16: List the `primary_specialization` and the number of employees in each specialization.
 """
+For each primary_specialization, calculate the total number of employees, the
+average years of experience, and the percentage of employees with a
+performance_score above 7. Rank the specializations by the total number of
+employees and filter out specializations with fewer than 10 employees.
+"""
+/*original question:
+SELECT
+  COUNT(employee_id) AS total_employees,
+  primary_specialization
+FROM employees
+GROUP BY primary_specialization;
+/*
