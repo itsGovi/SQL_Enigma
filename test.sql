@@ -1,8 +1,12 @@
 SELECT
-  department,
-  position,
   employee_id,
-  full_name
-FROM employees
-WHERE flight_risk > 50 AND engagement_score < 5
-GROUP BY department, position, employee_id;
+  full_name,
+  department,
+  travel_percentage
+FROM employees e
+WHERE travel_percentage > (
+  SELECT AVG(travel_percentage)
+  FROM employees
+  WHERE department = e.department
+)
+ORDER BY travel_percentage DESC;

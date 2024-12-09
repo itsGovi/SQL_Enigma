@@ -171,3 +171,46 @@ SELECT
 FROM employees
 GROUP BY department, position
 ORDER BY disengaged_with_high_flight_risk DESC;
+
+-- Question 12: Find the department with the highest average `base_salary` and the lowest average `performance_score`.
+"""
+Identify the top 25 employees in the department with the strongest negative \
+correlation between base_salary and performance_score. Display their
+employee_id, full_name, department, position, base_salary, and performance_score,
+sorted by performance_score in ascending order.
+"""
+/* original query:
+SELECT
+  AVG(base_salary) AS avg_base_salary,
+  department,
+  AVG(performance_score) AS avg_performance_score
+FROM employees
+GROUP BY department
+ORDER BY AVG(base_salary) DESC, AVG(performance_score) ASC;
+*/
+WITH department_correlation AS(
+  SELECT
+    department,
+    CORR(base_salary, performance_score) AS salary_performance_correlation
+  FROM employees
+  GROUP BY department
+  ORDER BY salary_performance_correlation ASC
+  LIMIT 1
+)
+SELECT
+  employee_id,
+  full_name,
+  department,
+  position,
+  base_salary,
+  performance_score
+FROM employees
+WHERE department = (SELECT department FROM department_correlation)
+ORDER BY performance_score ASC
+LIMIT 25;
+
+
+--Question 13: Retrieve the details of employees whose `travel_percentage` exceeds the department average.
+"""
+
+"""
