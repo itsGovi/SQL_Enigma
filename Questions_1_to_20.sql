@@ -255,10 +255,24 @@ average years of experience, and the percentage of employees with a
 performance_score above 7. Rank the specializations by the total number of
 employees and filter out specializations with fewer than 10 employees.
 """
-/*original question:
+/* The original question:
 SELECT
   COUNT(employee_id) AS total_employees,
   primary_specialization
 FROM employees
 GROUP BY primary_specialization;
-/*
+*/
+SELECT
+  primary_specialization,
+  COUNT(employee_id),
+  AVG(EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM hire_date)) AS avg_years_of_experience,
+  100*SUM((CASE WHEN performance_score > 7 THEN 1 ELSE 0 END) / COUNT(employee_id)) AS high_performance_score,
+  RANK() OVER (ORDER BY count(employee_id) DESC) AS rank_of_specialization
+FROM employees
+GROUP BY primary_specialization
+
+
+--Question 17: Retrieve the top 3 certifications based on the number of employees holding them.
+"""
+
+"""
