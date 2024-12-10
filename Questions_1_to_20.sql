@@ -274,5 +274,42 @@ GROUP BY primary_specialization
 
 --Question 17: Retrieve the top 3 certifications based on the number of employees holding them.
 """
+why I didn't use COUNT(employee_id) but choose COUNT(*):
+When you unnest string_to_array(certifications, ',') to create one row per certification,
+the result is something like this:
+
+certificate	| emp_id
+AWS	| 101
+Azure |	101
+AWS	| 102
+GCP	| 103
+Azure	| 104
+After unnesting, each certification is already linked to a specific row. Since the column
+emp_id is not used for grouping, counting all rows with COUNT(*) gives you the total
+number of employees holding each certification.
+"""
+WITH popular_certifications AS (
+  SELECT
+    UNNEST(string_to_array(certifications, ',')) AS certificate
+  FROM employees
+),
+certification_counts AS (
+  SELECT
+    certificate,
+    COUNT(*) AS employee_count,
+    RANK() OVER (ORDER BY COUNT(*) DESC) AS certificate_rank
+  FROM popular_certifications
+  GROUP BY certificate
+)
+SELECT
+  certificate_rank,
+  certificate,
+  employee_count
+FROM certification_counts
+WHERE certificate_rank <= 10
+
+
+-- Question 18: Find employees whose actual_utilization is more than their department's utilization_target.
+"""
 
 """
