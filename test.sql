@@ -1,9 +1,8 @@
 SELECT
-    DENSE_RANK() OVER (ORDER BY project_satisfaction DESC) AS rank,
   employee_id,
   full_name,
   department,
-  project_satisfaction
+  position,
+  promotion_readiness
 FROM employees
-WHERE level = 'senior'
-ORDER BY project_satisfaction DESC
+WHERE region = 'APAC' AND promotion_readiness > 75

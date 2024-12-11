@@ -344,3 +344,17 @@ SELECT
 FROM employees
 WHERE position = 'senior'
 ORDER BY project_satisfaction DESC
+
+
+-- Question 20: Retrieve all employees in the `APAC` region with `promotion_readiness` above 75%.
+"""
+
+"""
+SELECT
+  employee_id,
+  full_name,
+  department,
+  position,
+  promotion_readiness
+FROM employees
+WHERE region = 'APAC' AND promotion_readiness > 75
