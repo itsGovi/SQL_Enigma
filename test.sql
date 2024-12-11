@@ -1,9 +1,9 @@
 SELECT
+    DENSE_RANK() OVER (ORDER BY project_satisfaction DESC) AS rank,
   employee_id,
   full_name,
   department,
-  utilization_target,
-  actual_utilization,
-  CASE WHEN utilization_target > AVG(utilization_target) THEN 1 ELSE 0 END
+  project_satisfaction
 FROM employees
-GROUP BY department, employee_id
+WHERE level = 'senior'
+ORDER BY project_satisfaction DESC

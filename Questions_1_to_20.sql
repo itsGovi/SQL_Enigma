@@ -313,3 +313,25 @@ WHERE certificate_rank <= 10
 """
 
 """
+WITH department_avg AS (
+  SELECT
+    department,
+    AVG(utilization_target) AS avg_utilization_target
+  FROM employees
+  GROUP BY department
+)
+SELECT
+  e.employee_id,
+  e.full_name,
+  e.department,
+  e.actual_utilization,
+  d.avg_utilization_target
+FROM employees e
+JOIN department_avg d ON e.department = d.department
+WHERE e.actual_utilization > d.avg_utilization_target
+
+
+-- Question 19: Display all employees in the `senior` level sorted by their `project_satisfaction`.
+"""
+
+"""
