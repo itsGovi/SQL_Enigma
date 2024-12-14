@@ -5,9 +5,9 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "SQL_Practise_Q&A",
-            "database": "SQL_Enigma",
-            "username": "postgres"
+            "name": "SQL_Enigma",
+            "username": "postgres",
+            "database": "SQL_Enigma"
         }
     ]
 }

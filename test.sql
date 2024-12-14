@@ -1,8 +1,24 @@
 SELECT
+  region,
+  is_manager,
   employee_id,
-  full_name,
   department,
   position,
-  promotion_readiness
+  level,
+  AVG(base_salary),
+  AVG(total_comp)
 FROM employees
-WHERE region = 'APAC' AND promotion_readiness > 75
+
+
+/*
+SELECT
+  employee_id,
+  full_name,
+  region,
+  position,
+  level,
+  is_manager
+FROM employees
+WHERE is_manager = 'False'
+GROUP BY 
+*/
