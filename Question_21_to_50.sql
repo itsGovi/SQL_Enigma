@@ -38,3 +38,16 @@ JOIN grouped_data g2
   AND g1.is_manager = TRUE
   AND g2.is_manager = FALSE
 WHERE (g1.avg_base_salary - g2.avg_base_salary) > 0 AND (g1.avg_total_comp - g2.avg_total_comp) > 0;
+
+
+
+-- Question 22: compare the average delivery_quality of employees with the AWS Solutions Architect certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
+SELECT
+  employee_id,
+  full_name,
+  department,
+  delivery_quality,
+  AVG(delivery_quality) as dept_avg_delivery_quality
+FROM employees
+WHERE certifications LIKE '%AWS Solutions Architect%' AND delivery_quality > 85
+

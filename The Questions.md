@@ -31,36 +31,36 @@ These are foundational questions, often required for regular reporting and opera
 
 ### **Intermediate/Exploratory Queries (30 Questions)**
 
-2. [ ] Analyze the `base_salary` distribution across regions, and compare it with the average `total_comp` of managers and non-managers in each region.
-2. [ ] Identify departments where employees with certifications in `AWS Solutions Architect` have an average `delivery_quality` higher than 85%.
-2. [ ] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
-2. [ ] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
-2. [ ] Compute the average `project_satisfaction` for departments with more than 10 `active_projects`, highlighting any outliers in satisfaction.
-2. [ ] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
-2. [ ] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
-2. [ ] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
-2. [ ] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
-3. [ ] Compare the `promotion_readiness` of employees in 'Engineering Delivery' and 'Design & UX', highlighting those in the top quartile.
-3. [ ] Determine departments with the highest standard deviation in `avg_project_complexity`.
-3. [ ] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
-3. [ ] Find employees with zero `mentorship_hours` but have more than 3 `team_lead_projects`.
-3. [ ] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
-3. [ ] Determine the top 3 factors contributing to high `project_satisfaction` for employees in `Client Services`.
-3. [ ] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
-3. [ ] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
-3. [ ] Identify employees with at least two certifications and a `flight_risk` below 20%.
-3. [ ] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
-4. [ ] Analyze the trends in `actual_utilization` over the past two years for employees in the 'EMEA' region.
-4. [ ] Explore patterns in certifications held by employees with a `delivery_quality` of 85% or higher.
-4. [ ] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.
-4. [ ] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
-4. [ ] Determine which employees consistently exceed the `utilization_target` for their department and list their `active_projects`.
-4. [ ] Analyze the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
-4. [ ] Compare `engagement_score` and `billing_rate` trends for employees in mid-level roles across regions.
-4. [ ] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
-4. [ ] Calculate the average `span_premium` for employees managing more than 5 direct reports.
-4. [ ] Explore trends in `team_lead_projects` for employees in `senior` versus `mid` levels.
-5. [ ] Analyze the relationship between `remote_work_ratio` and `promotion_readiness` across all departments.
+2. [X] Analyze the `base_salary` distribution across regions, and compare it with the average `total_comp` of managers and non-managers in each region.
+3. [ ] compare the average `delivery_quality` of employees with the `AWS Solutions Architect` certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
+4. [ ] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
+5. [ ] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
+6. [ ] Compute the average `project_satisfaction` for departments with more than 10 `active_projects`, highlighting any outliers in satisfaction.
+7. [ ] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
+8. [ ] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
+9. [ ] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
+1. [ ] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
+1. [ ] Compare the `promotion_readiness` of employees in 'Engineering Delivery' and 'Design & UX', highlighting those in the top quartile.
+1. [ ] Determine departments with the highest standard deviation in `avg_project_complexity`.
+1. [ ] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
+1. [ ] Find employees with zero `mentorship_hours` but have more than 3 `team_lead_projects`.
+1. [ ] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
+1. [ ] Determine the top 3 factors contributing to high `project_satisfaction` for employees in `Client Services`.
+1. [ ] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
+1. [ ] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
+1. [ ] Identify employees with at least two certifications and a `flight_risk` below 20%.
+2. [ ] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
+2. [ ] Analyze the trends in `actual_utilization` over the past two years for employees in the 'EMEA' region.
+2. [ ] Explore patterns in certifications held by employees with a `delivery_quality` of 85% or higher.
+2. [ ] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.
+2. [ ] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
+2. [ ] Determine which employees consistently exceed the `utilization_target` for their department and list their `active_projects`.
+2. [ ] Analyze the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
+2. [ ] Compare `engagement_score` and `billing_rate` trends for employees in mid-level roles across regions.
+2. [ ] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
+2. [ ] Calculate the average `span_premium` for employees managing more than 5 direct reports.
+3. [ ] Explore trends in `team_lead_projects` for employees in `senior` versus `mid` levels.
+3. [ ] Analyze the relationship between `remote_work_ratio` and `promotion_readiness` across all departments.
 
 ---
 
