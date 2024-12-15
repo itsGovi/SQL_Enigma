@@ -1,27 +1,30 @@
-WITH department_delivery_quality AS (
-  SELECT
-    department,
-    AVG(delivery_quality) AS dept_avg_delivery_quality
-  FROM employees
-  GROUP BY department
+WITH certified AS (
+    SELECT
+        position,
+        level,
+        AVG(delivery_quality) as avg_with_aws
+    FROM employees
+    WHERE certifications LIKE '%AWS Solutions Architect%' AND department = 'Product Architecture'
+    GROUP BY position, level, employee_id
 ),
-aws_certified_employees AS (
-  SELECT
-    department,
-    AVG(delivery_quality) AS aws_cert_avg_delivery_quality
-  FROM employees
-  WHERE certifications LIKE '%AWS Solutions Architect%' -- Adjust based on how certifications are stored
-  GROUP BY department
-)
+not_certified AS (
+    SELECT
+        position,
+        level,
+        AVG(delivery_quality) AS avg_without_aws
+    FROM employees
+    WHERE certifications NOT LIKE '%AWS Solutions Architect%' AND department = 'Product Architecture'
+    GROUP BY position, level, employee_id
+),
+with_name
 SELECT
-  d.department,
-  d.dept_avg_delivery_quality,
-  a.aws_cert_avg_delivery_quality,
-  CASE 
-    WHEN a.aws_cert_avg_delivery_quality > 85 THEN 'Above 85%'
-    ELSE 'Below 85%'
-  END AS aws_cert_delivery_quality_status
-FROM department_delivery_quality d
-JOIN aws_certified_employees a
-  ON d.department = a.department
-WHERE a.aws_cert_avg_delivery_quality > d.dept_avg_delivery_quality;
+    wn.employee_id,
+    wn.full_name,
+    c.position,
+    c.level,
+    c.avg_with_aws,
+    nc.avg_without_aws
+FROM certified c
+JOIN not_certified nc
+    ON c.position = nc.position
+    AND c.level = nc.level
