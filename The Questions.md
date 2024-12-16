@@ -32,8 +32,8 @@ These are foundational questions, often required for regular reporting and opera
 ### **Intermediate/Exploratory Queries (30 Questions)**
 
 2. [X] Analyze the `base_salary` distribution across regions, and compare it with the average `total_comp` of managers and non-managers in each region.
-3. [ ] compare the average `delivery_quality` of employees with the `AWS Solutions Architect` certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
-4. [ ] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
+3. [X] compare the average `delivery_quality` of employees with the `AWS Solutions Architect` certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
+4. [X] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
 5. [ ] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
 6. [ ] Compute the average `project_satisfaction` for departments with more than 10 `active_projects`, highlighting any outliers in satisfaction.
 7. [ ] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
