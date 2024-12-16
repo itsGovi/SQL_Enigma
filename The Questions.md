@@ -34,7 +34,7 @@ These are foundational questions, often required for regular reporting and opera
 2. [X] Analyze the `base_salary` distribution across regions, and compare it with the average `total_comp` of managers and non-managers in each region.
 3. [X] compare the average `delivery_quality` of employees with the `AWS Solutions Architect` certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
 4. [X] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
-5. [ ] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
+5. [X] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
 6. [ ] Compute the average `project_satisfaction` for departments with more than 10 `active_projects`, highlighting any outliers in satisfaction.
 7. [ ] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
 8. [ ] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
@@ -109,3 +109,79 @@ These questions are structured to maximize exploration of the dataset, foster SQ
 make the question 5 a bit more hard -> increase the learning curve on that question and give me the updated version of it
 
 "rather than your using words (plain english) I need you to find a similar case(scenario/question/problem-statement) to use a similar solution and break-it-down. So, I could build my query understanding your lesson"
+
+
+
+### **Similar Scenario for Question 17** :
+
+ **Scenario** :
+
+Imagine a book database where each row contains a list of genres associated with a book (e.g., `"Fiction, Mystery, Thriller"`). Your task is to identify the top 3 most popular genres across all books by counting how many books belong to each genre.
+
+---
+
+### **Solution for Similar Scenario** :
+
+1. **Problem Breakdown** :
+
+* **Step 1** : Split the `genres` field (comma-separated values) into individual genres for each book.
+* **Step 2** : Treat each genre as a separate entry for counting.
+* **Step 3** : Group by individual genres and count the number of books associated with each genre.
+* **Step 4** : Rank the genres by popularity (book count) and return the top 3 genres.
+
+---
+
+2. **Query Solution (for Books and Genres)** :
+
+```sql
+WITH exploded_genres AS (
+    SELECT
+        UNNEST(string_to_array(genres, ',')) AS genre
+    FROM books
+),
+genre_counts AS (
+    SELECT
+        genre,
+        COUNT(*) AS book_count,
+        RANK() OVER (ORDER BY COUNT(*) DESC) AS genre_rank
+    FROM exploded_genres
+    GROUP BY genre
+)
+SELECT
+    genre,
+    book_count
+FROM genre_counts
+WHERE genre_rank <= 3;
+```
+
+---
+
+### **Breakdown of the Query** :
+
+1. **Step 1: Split and Unnest** :
+
+* `string_to_array(genres, ',')`: Splits the comma-separated `genres` field into an array.
+* `UNNEST()`: Converts the array into individual rows, each containing a single genre.
+
+1. **Step 2: Group and Count** :
+
+* `COUNT(*)`: Counts how many rows each genre appears in.
+* `GROUP BY genre`: Groups the data by each individual genre.
+
+1. **Step 3: Rank the Genres** :
+
+* `RANK() OVER (ORDER BY COUNT(*) DESC)`: Assigns a rank to each genre based on its count, with the most popular genre ranked 1.
+
+1. **Step 4: Filter Top 3 Genres** :
+
+* `WHERE genre_rank <= 3`: Filters the result to include only the top 3 genres.
+
+---
+
+### **Apply This Lesson to Certifications** :
+
+Replace:
+
+* **`books`** with  **`employees`** .
+* **`genres`** with  **`certifications`** .
+* **`book_count`** with  **`employee_count`** .
