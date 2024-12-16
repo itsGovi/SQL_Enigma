@@ -114,22 +114,38 @@ ORDER BY position, level, remote_work_class;
 
 -- Question 24: Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
 """
-Primary Specialization and Suggested Certifications
+Complete List of Primary Specializations and Suggested Certifications
 
-| Primary Specialization      |     Suggested Certifications                           |
-|----------------------------------|-------------------------------------------------------|
-| **Cloud Native**                 | AWS Solutions Architect, Google Cloud Architect       |
-| **DevOps**                       | Kubernetes, DevOps Engineer                          |
-| **Agile Delivery**               | Scrum Master, Agile Project Management               |
-| **Product Management**           | PSPO (Professional Scrum Product Owner), PMP         |
-| **UX/UI Design**                 | Google UX Design, Human Factors International        |
-| **Enterprise Architecture**      | TOGAF, Azure Architect                               |
-| **Business Analysis**            | Business Analysis Certification, Agile Business Analysis |
-| **Quality Assurance (QA)**       | ISTQB Certification, Six Sigma                       |
-| **Solution Architecture**        | AWS Solutions Architect, Google Cloud Architect      |
-| **Design Thinking**              | Design Thinking Certification, Interaction Design Foundation |
-| **Strategic Planning**           | Agile Leadership, Strategic Planning Certification   |
-| **Project Management**           | PMP (Project Management Professional), Prince2       |
+| **Primary Specialization**      | **Suggested Certifications**                                                       |
+|----------------------------------|-----------------------------------------------------------------------------------|
+| **Mobile Development**           | AWS Developer, Azure Developer                                                   |
+| **System Integration**           | TOGAF, Azure Architect                                                            |
+| **Full Stack**                   | AWS Solutions Architect, Azure Developer                                          |
+| **DevOps**                       | Kubernetes, AWS Developer                                                         |
+| **User Research**                | Google UX Design, Human Factors International                                     |
+| **Change Management**            | PMP, Prince2                                                                     |
+| **Cloud Native**                 | AWS Solutions Architect, Google Cloud Architect                                   |
+| **Web Applications**             | AWS Developer, Google Cloud Architect                                             |
+| **Digital Transformation**       | Agile Product Management, Google Cloud Architect                                  |
+| **Service Design**               | Interaction Design Foundation, Human Factors International                        |
+| **Data Architecture**            | AWS Solutions Architect, Google Cloud Architect                                   |
+| **Go-to-Market**                 | Agile Project Management, PMP                                                    |
+| **Market Analysis**              | Product Management (PMP), PSPO                                                   |
+| **Innovation Strategy**          | Strategic Planning, Agile Leadership                                              |
+| **Product Discovery**            | Design Thinking, Google UX Design                                                |
+| **Portfolio Management**         | PMP, Prince2                                                                     |
+| **Microservices**                | AWS Solutions Architect, Kubernetes                                              |
+| **Digital Strategy**             | PSPO, Agile Product Management                                                   |
+| **Backend**                      | AWS Solutions Architect, Google Cloud Architect                                   |
+| **Strategic Planning**           | Strategic Planning Certification, Agile Leadership                                |
+| **Cloud Infrastructure**         | AWS Solutions Architect, Azure Architect                                         |
+| **Frontend**                     | Google UX Design, Interaction Design Foundation                                  |
+| **Design Thinking**              | Design Thinking Certification, Google UX Design                                  |
+| **Design Systems**               | Design Thinking, Interaction Design Foundation                                   |
+| **API Design**                   | AWS Solutions Architect, Google Cloud Architect                                   |
+| **Agile Delivery**               | Scrum Master, Agile Project Management                                           |
+| **Mobile Design**                | Google UX Design, Human Factors International                                     |
+| **Security Architecture**        | AWS Solutions Architect, Azure Architect                                         |
 
 
 
@@ -163,5 +179,4 @@ Role and Suggested Certifications Mapping
 |                           | Senior Strategy Lead       | Senior      | Strategic Planning, Agile Leadership             |
 |                           | Chief Product Officer      | Senior      | Product Management (PMP), TOGAF                  |
 """
-
 

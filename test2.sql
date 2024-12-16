@@ -1,4 +1,5 @@
 SELECT
-    CAST(string_to_array(certifications,',') AS NUMERIC) AS certification,
-    COUNT(employee_id) AS employee_cnt
+    unnest(string_to_array(certifications, ',')) AS certification,
+    COUNT(*) AS employee_count
 FROM employees
+GROUP BY certification;
