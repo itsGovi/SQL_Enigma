@@ -35,9 +35,9 @@ These are foundational questions, often required for regular reporting and opera
 3. [X] compare the average `delivery_quality` of employees with the `AWS Solutions Architect` certification to those without it, within the department where this certification is present. The comparison should be based on the department and certification status."
 4. [X] Explore the relationship between `remote_work_ratio` and `engagement_score` across regions, grouping employees by `job level`.
 5. [X] Find employees whose certifications align perfectly with their `primary_specialization` and calculate their average `performance_score`.
-6. [ ] Compute the average `project_satisfaction` for departments with more than 10 `active_projects`, highlighting any outliers in satisfaction.
-7. [ ] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
-8. [ ] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
+6. [X] Compute the average `project_satisfaction` for departments with >= 3 `active_projects`, highlighting any outliers in satisfaction.
+7. [X] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
+8. [X] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
 9. [ ] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
 1. [ ] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
 1. [ ] Compare the `promotion_readiness` of employees in 'Engineering Delivery' and 'Design & UX', highlighting those in the top quartile.
@@ -109,8 +109,6 @@ These questions are structured to maximize exploration of the dataset, foster SQ
 make the question 5 a bit more hard -> increase the learning curve on that question and give me the updated version of it
 
 "rather than your using words (plain english) I need you to find a similar case(scenario/question/problem-statement) to use a similar solution and break-it-down. So, I could build my query understanding your lesson"
-
-
 
 ### **Similar Scenario for Question 17** :
 

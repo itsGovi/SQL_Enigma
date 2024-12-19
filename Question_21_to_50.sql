@@ -214,7 +214,8 @@ ORDER BY employee_cnt DESC;  -- You can adjust sorting as needed
 
 
 
--- Question 25: WITH dept_satis AS (
+-- Question 25: Compute the average `project_satisfaction` for departments with >= 3 `active_projects`, highlighting any outliers in satisfaction.
+WITH dept_satis AS (
     SELECT
         department,
         ROUND(CAST(AVG(project_satisfaction) AS NUMERIC), 2) as avg_dept_project_satis
@@ -234,3 +235,51 @@ FROM employees e
 JOIN dept_satis d
     ON e.department = d.department
 WHERE active_projects >= 3 AND e.project_satisfaction > d.avg_dept_project_satis
+
+
+
+-- Question 26. Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
+
+WITH general_flight_risk AS (
+    SELECT
+        department,
+        management_level,
+        ROUND(CAST(AVG(flight_risk) AS NUMERIC), 2) AS avg_flight_risk,
+        ROUND(CAST(STDDEV(flight_risk) AS NUMERIC), 2) AS flight_risk_variance
+    FROM employees
+    GROUP BY department, management_level
+)
+SELECT *
+FROM (
+    SELECT
+        e.department,
+        e.management_level,
+        e.employee_id,
+        e.full_name,
+        e.travel_percentage,
+        e.flight_risk,
+        g.avg_flight_risk,
+        g.flight_risk_variance,
+        CASE
+            WHEN e.flight_risk > g.avg_flight_risk THEN 'Above Average'
+            WHEN e.flight_risk < g.avg_flight_risk THEN 'Below Average'
+            ELSE 'Average'
+        END AS comparision
+    FROM employees e
+    JOIN general_flight_risk g
+        ON e.department = g.department
+) subquery
+ORDER BY comparision, flight_risk_variance DESC;
+
+"""
+-> When SQL sees ORDER BY comparision, it fails if comparision isn't precomputed or directly available.
+-> By turning the query into a subquery, you explicitly precompute comparision and pass it to the outer query.
+
+Why This Works:
+-> The subquery ensures comparision is available as a column in the temporary result, so ORDER BY comparision is valid.
+"""
+
+
+
+-- Question 27. Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
+

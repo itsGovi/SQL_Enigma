@@ -1,20 +1,18 @@
-WITH dept_satis AS (
+WITH sharing_score_bar AS (
     SELECT
         department,
-        ROUND(CAST(AVG(project_satisfaction) AS NUMERIC), 2) as avg_dept_project_satis
+        knowledge_sharing_score * 1.25 AS knowledge_sharing_bar
     FROM employees
     GROUP BY department
 )
 SELECT
     e.department,
-    e.active_projects,
     e.employee_id,
     e.full_name,
-    e.position,
-    e.level,
-    e.project_satisfaction,
-    d.avg_dept_project_satis
+    e.knowledge_sharing_score,
+    s.knowledge_sharing_bar
 FROM employees e
-JOIN dept_satis d
-    ON e.department = d.department
-WHERE active_projects >= 3 AND e.project_satisfaction > d.avg_dept_project_satis
+JOIN sharing_score_bar s
+    ON e.department = s.department
+WHERE e.knowledge_sharing_score > s.knowledge_sharing_bar
+ORDER BY e.knowledge_sharing_score DESC;
