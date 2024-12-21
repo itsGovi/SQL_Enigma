@@ -1,7 +1,7 @@
 WITH sharing_score_bar AS (
     SELECT
         department,
-        knowledge_sharing_score * 1.25 AS knowledge_sharing_bar
+            ROUND(CAST(AVG(knowledge_sharing_score) AS NUMERIC), 2) * 1.25 AS knowledge_sharing_bar
     FROM employees
     GROUP BY department
 )

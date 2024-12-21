@@ -282,4 +282,3 @@ Why This Works:
 
 
 -- Question 27. Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
-
