@@ -38,8 +38,8 @@ These are foundational questions, often required for regular reporting and opera
 6. [X] Compute the average `project_satisfaction` for departments with >= 3 `active_projects`, highlighting any outliers in satisfaction.
 7. [X] Compare the `flight_risk` of employees across departments, grouping by `management_level` and `travel_percentage`.
 8. [X] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
-9. [ ] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
-1. [ ] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
+9. [X] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
+1. [X] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
 1. [ ] Compare the `promotion_readiness` of employees in 'Engineering Delivery' and 'Design & UX', highlighting those in the top quartile.
 1. [ ] Determine departments with the highest standard deviation in `avg_project_complexity`.
 1. [ ] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
