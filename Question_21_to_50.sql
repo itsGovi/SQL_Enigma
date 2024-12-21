@@ -282,3 +282,47 @@ Why This Works:
 
 
 -- Question 27. Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
+WITH sharing_score_bar AS (
+    SELECT
+        department,
+        AVG(knowledge_sharing_score) * 1.25 AS knowledge_sharing_bar
+    FROM employees
+    GROUP BY department
+)
+SELECT
+    e.department,
+    e.employee_id,
+    e.full_name,
+    e.primary_specialization,
+    e.knowledge_sharing_score
+FROM employees e
+JOIN sharing_score_bar s
+    ON e.department = s.department
+WHERE e.knowledge_sharing_score > s.knowledge_sharing_bar
+ORDER BY e.knowledge_sharing_score DESC;
+
+
+
+-- Question 28: List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
+WITH less_used_emps AS (
+    SELECT
+        department,
+        CASE WHEN actual_utilization < utilization_target THEN TRUE ELSE FALSE END underutilization_bar
+    FROM employees
+    GROUP BY department, underutilization_bar
+)
+SELECT
+    e.department,
+    e.employee_id,
+    e.full_name,
+    e.performance_score,
+    e.engagement_score
+FROM employees e
+JOIN less_used_emps l
+    ON e.department = l.department
+WHERE e.performance_score > 4 AND l.underutilization_bar = TRUE
+ORDER BY engagement_score DESC;
+
+
+
+-- Question 29: 
