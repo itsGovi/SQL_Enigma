@@ -389,3 +389,13 @@ ORDER BY department, promotion_readiness DESC;
 
 -- Question 31: Determine departments with the highest standard deviation in `avg_project_complexity`.
 
+SELECT
+    department,
+    STDDEV(avg_project_complexity) AS std_avg_project_complex
+FROM employees
+GROUP BY department
+ORDER BY std_avg_project_complex DESC;
+
+
+
+-- Question 32: 
