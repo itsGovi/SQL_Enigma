@@ -40,11 +40,11 @@ These are foundational questions, often required for regular reporting and opera
 8. [X] Identify employees whose `knowledge_sharing_score` exceeds the department average by 25% or more and list their `primary_specialization`.
 9. [X] List underutilized employees (`actual_utilization` < `utilization_target`) with a `performance_score` greater than 4, ranking them by their `engagement_score`.
 1. [X] Identify employees who have worked for more than 5 years but have a `retention_risk` of 'High' and analyze their `engagement_score`.
-1. [ ] Compare the `promotion_readiness` of employees in 'Engineering Delivery' and 'Design & UX', highlighting those in the top quartile.
-1. [ ] Determine departments with the highest standard deviation in `avg_project_complexity`.
-1. [ ] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
-1. [ ] Find employees with zero `mentorship_hours` but have more than 3 `team_lead_projects`.
-1. [ ] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
+1. [X] Identify employees from 'Engineering Delivery' and 'Design & UX' whose `promotion_readiness` is in the top 25% of their respective departments. List their `employee_id`, `full_name`, `department`, and `promotion_readiness`, sorted by department and readiness in descending order."
+1. [X] Determine departments with the highest standard deviation in `avg_project_complexity`.
+1. [X] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
+1. [X] Find employees with zero `mentorship_hours` but have more than 3 `team_lead_projects`.
+1. [X] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
 1. [ ] Determine the top 3 factors contributing to high `project_satisfaction` for employees in `Client Services`.
 1. [ ] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
 1. [ ] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.

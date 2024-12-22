@@ -363,4 +363,29 @@ ORDER BY d.engagement_score_variance DESC;
 
 
 
--- Question 30: 
+-- Question 30: Identify employees from 'Engineering Delivery' and 'Design & UX' whose promotion_readiness is in the top 25% of their respective departments. List their employee_id, full_name, department, and promotion_readiness, sorted by department and readiness in descending order.
+
+WITH top25_readiness AS (
+    SELECT
+        employee_id,
+        full_name,
+        department,
+        promotion_readiness,
+        ROUND(CAST(PERCENT_RANK() OVER (PARTITION BY department ORDER BY promotion_readiness DESC) AS NUMERIC) * 100, 0) AS rank
+    FROM employees
+)
+SELECT
+    employee_id,
+    full_name,
+    department,
+    promotion_readiness,
+    rank
+FROM top25_readiness
+WHERE department IN ('Engineering Delivery', 'Design & UX')
+  AND rank <= 25
+ORDER BY department, promotion_readiness DESC;
+
+
+
+-- Question 31: Determine departments with the highest standard deviation in `avg_project_complexity`.
+
