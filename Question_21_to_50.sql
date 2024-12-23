@@ -398,4 +398,75 @@ ORDER BY std_avg_project_complex DESC;
 
 
 
--- Question 32: 
+-- Question 32: Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
+
+WITH filtered_employees AS (
+    SELECT
+        employee_id,
+        string_to_array(certifications, ',') AS cert_list
+    FROM employees
+    WHERE delivery_quality >= 90
+),
+certificates AS (
+    SELECT
+        employee_id,
+        UNNEST(cert_list) AS certificate
+    FROM filtered_employees
+
+)
+SELECT
+    certificate,
+    COUNT(DISTINCT employee_id) AS Emps_holding_certificate
+FROM certificates
+GROUP BY certificate
+ORDER BY Emps_holding_certificate DESC
+
+
+
+-- Question 33: Identify employees with fewer than 5 mentorship_hours but who have led more than 2 team_lead_projects, grouped by department, and rank them by team_lead_projects in descending order.
+
+SELECT
+    employee_id,
+    full_name,
+    department,
+    mentorship_hours,
+    team_lead_projects
+FROM employees
+WHERE mentorship_hours <= 10 AND team_lead_projects > 2
+GROUP BY department, employee_id
+ORDER BY team_lead_projects DESC
+
+
+
+-- Question 34: List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
+
+WITH region_avg_billing AS (
+    SELECT
+        region,
+        department,
+        position,
+        level,
+        ROUND(CAST(AVG(billing_rate) AS NUMERIC), 2) AS avg_billing_rate
+    FROM employees
+    GROUP BY region, department, position, level
+)
+SELECT
+    e.department,
+    e.employee_id,
+    e.full_name,
+    e.position,
+    e.level,
+    e.primary_specialization,
+    e.billing_rate,
+    r.avg_billing_rate
+FROM employees e
+JOIN region_avg_billing r
+    ON e.region = r.region -- Match by region
+    AND e.department = r.department -- Match by department
+    AND e.position = r.position -- Match by position
+    AND e.level = r.level -- Match by level
+WHERE e.billing_rate > r.avg_billing_rate;
+
+
+
+-- Question 35: List the top 3 attributes (e.g., primary_specialization, role, level, or department) with the highest average project_satisfaction for employees in Client Services, ranking them by their contribution.

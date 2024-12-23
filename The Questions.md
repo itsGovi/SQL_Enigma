@@ -43,10 +43,10 @@ These are foundational questions, often required for regular reporting and opera
 1. [X] Identify employees from 'Engineering Delivery' and 'Design & UX' whose `promotion_readiness` is in the top 25% of their respective departments. List their `employee_id`, `full_name`, `department`, and `promotion_readiness`, sorted by department and readiness in descending order."
 1. [X] Determine departments with the highest standard deviation in `avg_project_complexity`.
 1. [X] Identify certifications commonly associated with employees having a `delivery_quality` above 90%.
-1. [X] Find employees with zero `mentorship_hours` but have more than 3 `team_lead_projects`.
+1. [X] Identify employees with fewer than 10 `mentorship_hours` but who have led more than 2 `team_lead_projects`, grouped by department, and rank them by `team_lead_projects` in descending order.
 1. [X] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
-1. [ ] Determine the top 3 factors contributing to high `project_satisfaction` for employees in `Client Services`.
-1. [ ] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
+1. [X] Identify the top 3 attributes (`primary_specialization`, `role`, and `level`) with the highest average `project_satisfaction` for employees in the `Client Services` department. Rank these attributes in descending order of their average satisfaction.
+1. [X] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
 1. [ ] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
 1. [ ] Identify employees with at least two certifications and a `flight_risk` below 20%.
 2. [ ] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
