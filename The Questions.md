@@ -46,7 +46,7 @@ These are foundational questions, often required for regular reporting and opera
 1. [X] Identify employees with fewer than 10 `mentorship_hours` but who have led more than 2 `team_lead_projects`, grouped by department, and rank them by `team_lead_projects` in descending order.
 1. [X] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
 1. [X] Identify the top 3 attributes (`primary_specialization`, `role`, and `level`) with the highest average `project_satisfaction` for employees in the `Client Services` department. Rank these attributes in descending order of their average satisfaction.
-1. [X] Compute the average `training_hours` and `promotion_readiness` for each `job level`, and rank job levels by average `promotion_readiness`."
+1. [X] Compute the average `training_hours` and `promotion_readiness` for each `job level`, and rank job levels by average `promotion_readiness`.
 1. [X] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
 1. [X] Identify employees with at least two certifications and a `flight_risk` below 20%.
 2. [X] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.

@@ -513,4 +513,4 @@ LIMIT 3;
 
 
 
--- Question 36: 
+-- Question 36: Compute the average training_hours and promotion_readiness for each job level, and rank job levels by average promotion_readiness.
