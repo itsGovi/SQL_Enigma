@@ -46,10 +46,10 @@ These are foundational questions, often required for regular reporting and opera
 1. [X] Identify employees with fewer than 10 `mentorship_hours` but who have led more than 2 `team_lead_projects`, grouped by department, and rank them by `team_lead_projects` in descending order.
 1. [X] List employees whose `billing_rate` exceeds the regional average and highlight their `primary_specialization`.
 1. [X] Identify the top 3 attributes (`primary_specialization`, `role`, and `level`) with the highest average `project_satisfaction` for employees in the `Client Services` department. Rank these attributes in descending order of their average satisfaction.
-1. [X] Analyze the correlation between `training_hours` and `promotion_readiness`, grouping by `job level`.
-1. [ ] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
-1. [ ] Identify employees with at least two certifications and a `flight_risk` below 20%.
-2. [ ] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
+1. [X] Compute the average `training_hours` and `promotion_readiness` for each `job level`, and rank job levels by average `promotion_readiness`."
+1. [X] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
+1. [X] Identify employees with at least two certifications and a `flight_risk` below 20%.
+2. [X] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
 2. [ ] Analyze the trends in `actual_utilization` over the past two years for employees in the 'EMEA' region.
 2. [ ] Explore patterns in certifications held by employees with a `delivery_quality` of 85% or higher.
 2. [ ] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.

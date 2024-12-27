@@ -470,3 +470,47 @@ WHERE e.billing_rate > r.avg_billing_rate;
 
 
 -- Question 35: List the top 3 attributes (e.g., primary_specialization, role, level, or department) with the highest average project_satisfaction for employees in Client Services, ranking them by their contribution.
+
+WITH avg_satisfaction_by_attribute AS (
+    -- Compute average project satisfaction by primary_specialization
+    SELECT
+        'primary_specialization' AS attribute_type,
+        primary_specialization AS attribute_value,
+        AVG(project_satisfaction) AS avg_satisfaction
+    FROM employees
+    WHERE department = 'Client Services'
+    GROUP BY primary_specialization
+
+    UNION ALL
+
+    /*Computing average project satisfaction by role*/
+    SELECT
+        'role' AS attribute_type,
+        position AS attribute_value,
+        AVG(project_satisfaction) AS avg_satisfaction
+    FROM employees
+    WHERE department = 'Client Services'
+    GROUP BY position
+
+    UNION ALL
+
+    /*Computing average project satisfaction by level*/
+    SELECT
+        'level' AS attribute_type,
+        level AS attribute_value,
+        AVG(project_satisfaction) AS avg_satisfaction
+    FROM employees
+    WHERE department = 'Client Services'
+    GROUP BY level
+)
+SELECT
+    attribute_type,
+    attribute_value,
+    avg_satisfaction
+FROM avg_satisfaction_by_attribute
+ORDER BY avg_satisfaction DESC
+LIMIT 3;
+
+
+
+-- Question 36: 
