@@ -1,24 +1,18 @@
-WITH entry_level AS (
+WITH yearly_utilization AS (
     SELECT
-        department,
-        ROUND(CAST(AVG(knowledge_sharing_score) AS NUMERIC), 2) AS avg_entry_level_score
+        EXTRACT(YEAR FROM hire_date) AS year,
+        ROUND(CAST(AVG(actual_utilization) AS NUMERIC), 2) AS avg_utilization
     FROM employees
-    WHERE level = 'entry'
-    GROUP BY department
-),
-senior_level AS (
-    SELECT
-        department,
-        ROUND(CAST(AVG(knowledge_sharing_score) AS NUMERIC),2) AS avg_senior_level_score
-    FROM employees
-    WHERE level = 'senior'
-    GROUP BY department
+    WHERE region = 'EMEA'
+    GROUP BY EXTRACT(YEAR FROM hire_date)
+    ORDER BY year ASC
 )
 SELECT
-    e.department,
-    e.avg_entry_level_score,
-    s.avg_senior_level_score,
-    ROUND(CAST(s.avg_senior_level_score - e.avg_entry_level_score AS NUMERIC), 2) AS difference
-FROM entry_level e
-JOIN senior_level s
-    ON e.department = s.department;
+    year,
+    avg_utilization,
+    LAG(avg_utilization) OVER (ORDER BY year) AS prev_year_utilization,
+    ROUND(CAST(
+        (avg_utilization - LAG(avg_utilization) OVER (ORDER BY year)) / 
+        LAG(avg_utilization) OVER (ORDER BY year) AS NUMERIC) * 100, 2
+    ) AS yoy_change
+FROM yearly_utilization;
