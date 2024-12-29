@@ -50,11 +50,11 @@ These are foundational questions, often required for regular reporting and opera
 1. [X] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
 1. [X] Identify employees with at least two certifications and a `flight_risk` below 20%.
 2. [X] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
-2. [X] Calculate the average `actual_utilization` for employees in the 'EMEA' region, grouped by year.
+2. [X] Calculate the average `actual_utilization` for employees in the 'EMEA' region, grouped by year (YoY).
 2. [X] Explore patterns in certifications held by employees with a `delivery_quality` of 85% or higher.
 2. [X] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.
-2. [ ] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
-2. [ ] Determine which employees consistently exceed the `utilization_target` for their department and list their `active_projects`.
+2. [X] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
+2. [X] Identify employees whose `actual_utilization` exceeds their department's `utilization_target` by more than 10% and have more than 2 `active_projects`. Highlight their `department`, `level`, and `performance_score`.
 2. [ ] Analyze the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
 2. [ ] Compare `engagement_score` and `billing_rate` trends for employees in mid-level roles across regions.
 2. [ ] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
