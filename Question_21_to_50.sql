@@ -514,3 +514,26 @@ LIMIT 3;
 
 
 -- Question 36: Compute the average training_hours and promotion_readiness for each job level, and rank job levels by average promotion_readiness.
+SELECT
+    department,
+    position,
+    level AS job_level,
+    ROUND(CAST(AVG(training_hours) AS NUMERIC), 2) AS avg_training_hours,
+    ROUND(CAST(AVG(promotion_readiness) AS NUMERIC), 2) AS avg_promotion_readiness
+FROM employees
+GROUP BY level, department, position
+ORDER BY avg_promotion_readiness DESC;
+
+
+
+-- Question 37: Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
+SELECT
+    region,
+    primary_specialization,
+    ROUND(CAST(AVG(engagement_score) AS NUMERIC), 2) AS avg_engagement_score
+FROM employees
+GROUP BY region, primary_specialization
+
+
+
+-- Question 38: Identify employees with at least two certifications and a `flight_risk` below 20%.
