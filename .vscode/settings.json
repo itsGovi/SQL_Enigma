@@ -6,8 +6,8 @@
             "port": 5432,
             "driver": "PostgreSQL",
             "name": "SQL_Enigma",
-            "username": "postgres",
-            "database": "SQL_Enigma"
+            "database": "SQL_Enigma",
+            "username": "postgres"
         }
     ]
 }

@@ -50,7 +50,7 @@ These are foundational questions, often required for regular reporting and opera
 1. [X] Calculate the average `engagement_score` by `primary_specialization`, comparing trends across regions.
 1. [X] Identify employees with at least two certifications and a `flight_risk` below 20%.
 2. [X] Compare the `knowledge_sharing_score` trends between `senior` and `entry` levels across all departments.
-2. [ ] Analyze the trends in `actual_utilization` over the past two years for employees in the 'EMEA' region.
+2. [X] Analyze the trends in `actual_utilization` over the past two years for employees in the 'EMEA' region.
 2. [ ] Explore patterns in certifications held by employees with a `delivery_quality` of 85% or higher.
 2. [ ] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.
 2. [ ] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
