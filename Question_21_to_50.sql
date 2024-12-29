@@ -586,14 +586,16 @@ JOIN senior_level s
 
 WITH yearly_utilization AS (
     SELECT
+        department,
         EXTRACT(YEAR FROM hire_date) AS year,
         ROUND(CAST(AVG(actual_utilization) AS NUMERIC), 2) AS avg_utilization
     FROM employees
     WHERE region = 'EMEA'
-    GROUP BY EXTRACT(YEAR FROM hire_date)
-    ORDER BY year ASC
+    GROUP BY EXTRACT(YEAR FROM hire_date), department
+    ORDER BY department
 )
 SELECT
+    department,
     year,
     avg_utilization,
     LAG(avg_utilization) OVER (ORDER BY year) AS prev_year_utilization,
@@ -605,4 +607,30 @@ FROM yearly_utilization;
 
 
 
--- Question 41: 
+-- Question 41: Find the most common certification held by employees with a delivery quality score of 85 or higher, within each department.
+
+WITH high_deliveriables AS (
+    SELECT
+        employee_id,
+        department,
+        position,
+        UNNEST(string_to_array(certifications, ',')) as certificate
+    FROM employees
+    WHERE delivery_quality >= 85
+),
+ranked_certs AS (
+    SELECT
+        department,
+        certificate,
+        COUNT(*) AS certificate_count,
+        ROW_NUMBER() OVER (PARTITION BY department ORDER BY COUNT(*) DESC) AS row_num
+    FROM high_deliveriables
+    GROUP BY department, certificate
+)
+SELECT department, certificate, certificate_count
+FROM ranked_certs
+WHERE row_num = 1;
+
+
+
+-- Question 42: 

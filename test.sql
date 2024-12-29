@@ -1,18 +1,21 @@
-WITH yearly_utilization AS (
+WITH high_deliveriables AS (
     SELECT
-        EXTRACT(YEAR FROM hire_date) AS year,
-        ROUND(CAST(AVG(actual_utilization) AS NUMERIC), 2) AS avg_utilization
+        employee_id,
+        department,
+        UNNEST(string_to_array(certifications, ',')) as certificate
     FROM employees
-    WHERE region = 'EMEA'
-    GROUP BY EXTRACT(YEAR FROM hire_date)
-    ORDER BY year ASC
-)
+    WHERE delivery_quality >= 85
+),
+ranked_cert AS (
 SELECT
-    year,
-    avg_utilization,
-    LAG(avg_utilization) OVER (ORDER BY year) AS prev_year_utilization,
-    ROUND(CAST(
-        (avg_utilization - LAG(avg_utilization) OVER (ORDER BY year)) / 
-        LAG(avg_utilization) OVER (ORDER BY year) AS NUMERIC) * 100, 2
-    ) AS yoy_change
-FROM yearly_utilization;
+    department,
+    certificate,
+    COUNT(*) AS certificate_count,
+    ROW_NUMBER() OVER (PARTITION BY department ORDER BY COUNT(*) DESC) AS row_num
+FROM high_deliveriables
+GROUP BY certificate, department
+)
+
+SELECT department, certificate, certificate_count
+FROM ranked_cert
+WHERE row_num = 1;
