@@ -1,21 +1,34 @@
-WITH high_deliveriables AS (
-    SELECT
-        employee_id,
+WITH RiskSummary AS (
+    SELECT 
+        region,
         department,
-        UNNEST(string_to_array(certifications, ',')) as certificate
+        COUNT(CASE WHEN retention_risk = 'High' THEN 1 END) AS high_risk_count,
+        COUNT(*) AS total_count,
+        COUNT(CASE WHEN retention_risk = 'High' THEN 1 END) * 1.0 / COUNT(*) AS high_risk_ratio
     FROM employees
-    WHERE delivery_quality >= 85
+    GROUP BY region, department
 ),
-ranked_cert AS (
-SELECT
-    department,
-    certificate,
-    COUNT(*) AS certificate_count,
-    ROW_NUMBER() OVER (PARTITION BY department ORDER BY COUNT(*) DESC) AS row_num
-FROM high_deliveriables
-GROUP BY certificate, department
+AvgRisk AS (
+    SELECT 
+        AVG(high_risk_ratio) AS avg_risk_ratio
+    FROM RiskSummary
+),
+FilteredRisk AS (
+    SELECT 
+        region,
+        department,
+        high_risk_count,
+        total_count,
+        high_risk_ratio,
+        high_risk_ratio > (SELECT avg_risk_ratio * 1.2 FROM AvgRisk) AS exceeds_threshold
+    FROM RiskSummary
 )
-
-SELECT department, certificate, certificate_count
-FROM ranked_cert
-WHERE row_num = 1;
+SELECT 
+    region,
+    department,
+    high_risk_count,
+    total_count,
+    high_risk_ratio
+FROM FilteredRisk
+WHERE exceeds_threshold = TRUE
+ORDER BY high_risk_ratio DESC;
