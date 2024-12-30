@@ -1,34 +1,27 @@
-WITH RiskSummary AS (
-    SELECT 
-        region,
+WITH median_value AS (
+    SELECT
         department,
-        COUNT(CASE WHEN retention_risk = 'High' THEN 1 END) AS high_risk_count,
-        COUNT(*) AS total_count,
-        COUNT(CASE WHEN retention_risk = 'High' THEN 1 END) * 1.0 / COUNT(*) AS high_risk_ratio
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY training_hours) AS median_hours
     FROM employees
-    GROUP BY region, department
+    GROUP BY department
 ),
-AvgRisk AS (
-    SELECT 
-        AVG(high_risk_ratio) AS avg_risk_ratio
-    FROM RiskSummary
-),
-FilteredRisk AS (
-    SELECT 
-        region,
-        department,
-        high_risk_count,
-        total_count,
-        high_risk_ratio,
-        high_risk_ratio > (SELECT avg_risk_ratio * 1.2 FROM AvgRisk) AS exceeds_threshold
-    FROM RiskSummary
+AboveMedian AS (
+    SELECT
+        e.employee_id,
+        e.full_name,
+        e.department,
+        e.training_hours,
+        m.median_hours,
+        e.performance_score
+    FROM employees e
+    JOIN median_value m
+        ON e.department = m.department
+    WHERE e.training_hours > m.median_hours
 )
-SELECT 
-    region,
+SELECT
+    employee_id,
+    full_name,
     department,
-    high_risk_count,
-    total_count,
-    high_risk_ratio
-FROM FilteredRisk
-WHERE exceeds_threshold = TRUE
-ORDER BY high_risk_ratio DESC;
+    performance_score
+FROM AboveMedian
+ORDER BY performance_score DESC;
