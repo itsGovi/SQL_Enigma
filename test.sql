@@ -1,27 +1,30 @@
-WITH median_value AS (
+WITH DeptUtilization AS (
     SELECT
         department,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY training_hours) AS median_hours
+        AVG(utilization_target) * 1.1 AS utilization_threshold
     FROM employees
     GROUP BY department
 ),
-AboveMedian AS (
+ExceedingEmployees AS (
     SELECT
         e.employee_id,
         e.full_name,
         e.department,
-        e.training_hours,
-        m.median_hours,
+        e.actual_utilization,
+        d.utilization_threshold,
+        e.active_projects,
+        e.level,
         e.performance_score
     FROM employees e
-    JOIN median_value m
-        ON e.department = m.department
-    WHERE e.training_hours > m.median_hours
+    JOIN DeptUtilization d
+        ON e.department = d.department
+    WHERE e.actual_utilization > d.utilization_threshold
+      AND e.active_projects > 2
 )
 SELECT
+    department,
+    level,
     employee_id,
     full_name,
-    department,
     performance_score
-FROM AboveMedian
-ORDER BY performance_score DESC;
+FROM ExceedingEmployees;
