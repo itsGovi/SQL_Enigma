@@ -1,9 +1,19 @@
-SELECT 
-    m.employee_id AS manager_emp_id,
-    m.full_name,
-    COUNT(e.employee_id) AS emp_managed,
-    ROUND(CAST(AVG(e.project_satisfaction) AS NUMERIC), 2) AS avg_project_satisfaction
+WITH emp_count AS (
+    SELECT
+        region,
+        position,
+        COUNT(employee_id) AS employee_count
+    FROM employees
+    WHERE level = 'mid'
+    GROUP BY region, position
+)
+SELECT
+    e.position,
+    ec.employee_count,
+    ROUND(CAST(AVG(billing_rate) AS NUMERIC), 2) AS avg_billing_rate,
+    ROUND(CAST(AVG(engagement_score) AS NUMERIC), 2) AS avg_engagement_score
 FROM employees e
-JOIN employees m ON e.manager_id = m.employee_id
-WHERE m.is_manager = TRUE
-GROUP BY m.employee_id, m.full_name;
+JOIN emp_count ec
+    ON e.position = ec.position
+WHERE e.region = 'EMEA' /* change as you want - Americas, EPAC, EMEA */
+GROUP BY e.region, e.position, ec.employee_count
