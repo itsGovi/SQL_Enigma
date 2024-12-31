@@ -57,7 +57,7 @@ These are foundational questions, often required for regular reporting and opera
 2. [X] Identify employees whose `actual_utilization` exceeds their department's `utilization_target` by more than 10% and have more than 2 `active_projects`. Highlight their `department`, `level`, and `performance_score`.
 2. [X] Find the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
 2. [X] Compare `engagement_score` and `billing_rate` trends for employees in mid-level roles across regions.
-2. [ ] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
+2. [X] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
 2. [ ] Calculate the average `span_premium` for employees managing more than 5 direct reports.
 3. [ ] Explore trends in `team_lead_projects` for employees in `senior` versus `mid` levels.
 3. [ ] Analyze the relationship between `remote_work_ratio` and `promotion_readiness` across all departments.

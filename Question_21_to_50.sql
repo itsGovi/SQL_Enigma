@@ -777,4 +777,20 @@ GROUP BY e.region, e.position, ec.employee_count
 
 
 
--- Question 46: 
+-- Question 47: Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
+
+SELECT
+    region,
+    position,
+    COUNT(employee_id) AS employee_counts,
+    ROUND(CAST(AVG(innovation_score) AS NUMERIC), 2) AS mean_innovation_score,
+    MODE() WITHIN GROUP (ORDER BY innovation_score) AS mode_innovation_score,
+    ROUND(CAST(VARIANCE(innovation_score) AS NUMERIC), 2) AS variance_innovation_score
+FROM employees
+WHERE department = 'Product Strategy'
+GROUP BY region, position
+ORDER BY mean_innovation_score DESC;
+
+
+
+-- Question 48: 
