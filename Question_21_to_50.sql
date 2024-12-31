@@ -739,4 +739,18 @@ FROM ExceedingEmployees;
 
 
 
--- Question 45: 
+-- Question 45: Find the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
+
+SELECT 
+    m.employee_id AS manager_emp_id,
+    m.full_name,
+    COUNT(e.employee_id) AS emp_managed,
+    ROUND(CAST(AVG(e.project_satisfaction) AS NUMERIC), 2) AS avg_project_satisfaction
+FROM employees e
+JOIN employees m ON e.manager_id = m.employee_id
+WHERE m.is_manager = TRUE
+GROUP BY m.employee_id, m.full_name;
+
+
+
+-- Question 46: 

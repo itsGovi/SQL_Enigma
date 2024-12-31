@@ -55,7 +55,7 @@ These are foundational questions, often required for regular reporting and opera
 2. [X] Compare the distribution of `retention_risk` across regions, highlighting departments with an unusually high proportion of 'High' risk employees.
 2. [X] Identify employees whose `training_hours` are above the median for their department and analyze their `performance_score`.
 2. [X] Identify employees whose `actual_utilization` exceeds their department's `utilization_target` by more than 10% and have more than 2 `active_projects`. Highlight their `department`, `level`, and `performance_score`.
-2. [ ] Analyze the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
+2. [X] Find the average `project_satisfaction` for employees managed by each `manager_id` across all regions.
 2. [ ] Compare `engagement_score` and `billing_rate` trends for employees in mid-level roles across regions.
 2. [ ] Highlight key differences in `innovation_score` across regions for employees in `Product Strategy`.
 2. [ ] Calculate the average `span_premium` for employees managing more than 5 direct reports.
