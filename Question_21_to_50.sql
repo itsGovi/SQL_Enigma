@@ -793,4 +793,5 @@ ORDER BY mean_innovation_score DESC;
 
 
 
--- Question 48: 
+-- Question 48: Calculate the average span_of_control for employees with more than 5 direct reports, who have a management level of 'mid' or 'senior', and whose total compensation exceeds $150,000. Additionally, segment the result by their department and determine if the average span_of_control differs significantly based on their primary specialization.
+
