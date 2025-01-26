@@ -744,7 +744,7 @@ def validate_data(df):
         raise ValueError("Invalid employee_id values")
 
 def main():
-    df = pd.read_excel("C:\\Users\\govar\\OneDrive\\Documents\\HRM\\data\\processed\\consultancy_data.xlsx")
+    df = pd.read_excel("C:\\Users\\govar\\OneDrive\\Documents\\SQL_Enigma\\consultancy_data_5400.xlsx")
     df['hire_date'] = pd.to_datetime(df['hire_date'])
     with create_connection() as conn:
         try:
