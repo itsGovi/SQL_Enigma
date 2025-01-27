@@ -4,7 +4,7 @@
 
 ### **Day-to-Day Reporting (Basic-Intermediate)**
 
-1. [ ] Identify employees hired in the last 90 days before  **2024-01-01** , calculate their average engagement_score, and compare it to the department-level average for all employees. Return departments where the difference exceeds 10%, and highlight if these departments also have high average retention_risk.
+1. [X] Identify employees hired in the last 90 days before **2024-01-01** and compare their individual engagement scores to the overall department-level engagement score. Return the employees whose engagement score exceeds their department’s overall engagement score by more than 10%, along with their details such as `employee_id`, `full_name`, `department`, `position`, and `level`.
 2. [ ] Count the number of certifications by industry_expertise and rank them by popularity.
 3. [ ] Find the top 10 cities by total compensation and include their avg_billing_rate.
 4. [ ] List employees in the Americas region with more than three active_projects and actual_utilization above 90%.
