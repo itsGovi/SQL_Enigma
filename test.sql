@@ -1,9 +1,8 @@
 SELECT
-    ROW_NUMBER() OVER (ORDER BY hire_date DESC)
-    employee_id,
-    full_name,
-    department,
-    engagement_score
-FROM employees
-WHERE hire_date >= '2023-10-01'
-ORDER BY hire_date DESC
+    certificate_name,
+    COUNT(*) AS total_count
+FROM (
+    SELECT UNNEST(STRING_TO_ARRAY(certifications, ',')) AS certificate_name
+    FROM employees
+)
+GROUP BY certificate_name
