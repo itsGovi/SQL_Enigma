@@ -95,3 +95,35 @@ ORDER BY region, regional_rank;
 
 
 "Q3:"
+WITH ranked_employees AS (
+    SELECT
+        region,
+        RANK() OVER (PARTITION BY region ORDER BY total_comp DESC) AS rank,
+        employee_id,
+        full_name,
+        department,
+        total_comp,
+        billing_rate
+    FROM employees
+),
+regional_avg_billing AS (
+    SELECT
+        region,
+        ROUND(AVG(billing_rate)::NUMERIC, 2) AS avg_billing_rate
+    FROM employees
+    GROUP BY region
+)
+SELECT
+    r.*,
+    rab.avg_billing_rate
+FROM ranked_employees r
+JOIN regional_avg_billing rab
+    ON r.region = rab.region
+WHERE rank <= 10 
+AND r.billing_rate > rab.avg_billing_rate;
+
+
+---
+
+
+"Q4:"

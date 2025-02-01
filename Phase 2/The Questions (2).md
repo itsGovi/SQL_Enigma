@@ -5,8 +5,8 @@
 ### **Day-to-Day Reporting (Basic-Intermediate)**
 
 1. [X] Identify employees hired in the last 90 days before **2024-01-01** and compare their individual engagement scores to the overall department-level engagement score. Return the employees whose engagement score exceeds their department’s overall engagement score by more than 10%, along with their details such as `employee_id`, `full_name`, `department`, `position`, and `level`.
-2. [ ] Count the number of certifications by `industry_expertise` and `department`, then rank them by popularity within each `region`. Additionally, identify the top 3 most popular certifications across all regions, grouped by their `industry_expertise`.
-3. [ ] Find the top 10 cities by total compensation and include their avg_billing_rate.
+2. [X] Count the number of certifications by `industry_expertise` and `department`, then rank them by popularity within each `region`. Additionally, identify the top 3 most popular certifications across all regions, grouped by their `industry_expertise`.
+3. [ ] Identify the top 10 employees by total compensation within each of the 3 regions. For each of these employees, calculate their average billing rate and the percentage of total compensation they contribute within their region. Only include employees whose average billing rate exceeds the average billing rate of their respective region.
 4. [ ] List employees in the Americas region with more than three active_projects and actual_utilization above 90%.
 5. [ ] Calculate the avg_project_satisfaction for each department and compare it to the company average.
 6. [ ] Find employees whose avg_team_size exceeds their department’s median team size.
