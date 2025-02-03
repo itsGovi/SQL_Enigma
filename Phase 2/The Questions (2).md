@@ -6,8 +6,8 @@
 
 1. [X] Identify employees hired in the last 90 days before **2024-01-01** and compare their individual engagement scores to the overall department-level engagement score. Return the employees whose engagement score exceeds their department’s overall engagement score by more than 10%, along with their details such as `employee_id`, `full_name`, `department`, `position`, and `level`.
 2. [X] Count the number of certifications by `industry_expertise` and `department`, then rank them by popularity within each `region`. Additionally, identify the top 3 most popular certifications across all regions, grouped by their `industry_expertise`.
-3. [ ] Identify the top 10 employees by total compensation within each of the 3 regions. For each of these employees, calculate their average billing rate and the percentage of total compensation they contribute within their region. Only include employees whose average billing rate exceeds the average billing rate of their respective region.
-4. [ ] List employees in the Americas region with more than three active_projects and actual_utilization above 90%.
+3. [X] Identify the top 10 employees by total compensation within each of the 3 regions. For each of these employees, calculate their average billing rate and the percentage of total compensation they contribute within their region. Only include employees whose average billing rate exceeds the average billing rate of their respective region.
+4. [X] Identify employees in the Americas region who have more than two active projects and an actual utilization > 85%. Additionally, calculate the percentage difference between each employee's actual utilization and their region's average actual utilization. Only include employees whose actual utilization is at least 10% higher than the regional average.
 5. [ ] Calculate the avg_project_satisfaction for each department and compare it to the company average.
 6. [ ] Find employees whose avg_team_size exceeds their department’s median team size.
 7. [ ] Identify the certifications with the highest avg_innovation_score for entry-level employees.
@@ -128,3 +128,6 @@
 ---
 
 These 100 questions cover an extensive range of SQL challenges, building both theoretical understanding and practical skills necessary for real-world data analysis. Let me know if you’d like tailored guidance for any question!
+
+
+make the question a bit more hard -> increase the learning curve on that question and give me the updated version of it
