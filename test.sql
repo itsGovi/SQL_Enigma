@@ -1,13 +1,10 @@
 /*
-Identify employees in the Americas region who have more than two active
-projects and an actual utilization >= 90%. Additionally, calculate the
-percentage difference between each employee's actual utilization and their
-region's average actual utilization. Only include employees whose actual
-utilization is at least 10% higher than the regional average.*/
+For each department in the EMCA region, calculate the average project
+satisfaction of employees who have more than three active projects and
+actual utilization above 90%. Then, compare this department-level average
+with the overall company-wide average project satisfaction. Return only the
+departments where the average project satisfaction is below the company-wide
+average.*/
 
-    SELECT
-    region,
-    ROUND(CAST(AVG(actual_utilization) AS NUMERIC), 2) AS avg_actual_utilization
-    FROM employees
-    WHERE region = 'Americas'
-    GROUP BY region
+SELECT DISTINCT department
+FROM employees
