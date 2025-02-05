@@ -153,4 +153,34 @@ WHERE e.active_projects > 2
 ---
 
 
-"Q4:"
+"Q5:"
+WITH dept_avg AS (
+SELECT
+    department,
+    ROUND(CAST(AVG(project_satisfaction) AS NUMERIC), 2) AS dept_avg_project_satisfaction
+FROM employees
+WHERE region = 'EMEA' AND active_projects > 2 AND actual_utilization > 85
+GROUP BY department
+),
+overall_avg AS (
+SELECT
+    department,
+    ROUND(CAST(AVG(project_satisfaction) AS NUMERIC), 2) AS overall_avg_project_satisfaction
+FROM employees
+WHERE active_projects > 2 AND actual_utilization > 85
+GROUP BY department
+)
+SELECT
+    d.department,
+    d.dept_avg_project_satisfaction,
+    o.overall_avg_project_satisfaction
+FROM dept_avg d 
+JOIN overall_avg o 
+    ON d.department = o.department
+WHERE o.overall_avg_project_satisfaction > d.dept_avg_project_satisfaction
+
+
+---
+
+
+"Q6:"
