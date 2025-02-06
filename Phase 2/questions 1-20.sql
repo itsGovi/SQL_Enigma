@@ -226,3 +226,46 @@ WHERE e.avg_team_size > md.medain_team_size
 
 "Q7:"
 
+WITH certificates_names AS (
+    SELECT
+        level,
+        region,
+        UNNEST(STRING_TO_ARRAY(certifications, ',')) AS certificate_name,
+        department,
+        innovation_score
+    FROM employees
+ ),
+certification_counts AS (
+    SELECT
+        level,
+        certificate_name,
+        department,
+        COUNT(*) AS count_of_cert_held_by_emp,
+        ROUND(CAST(AVG(innovation_score) AS NUMERIC), 2) AS avg_innovation_score
+    FROM certificates_names
+    GROUP BY certificate_name, department, level
+),
+ranked_certs AS (
+    SELECT
+        department,
+        certificate_name,
+        avg_innovation_score,
+        count_of_cert_held_by_emp,
+        RANK() OVER (PARTITION BY department ORDER BY avg_innovation_score DESC) AS rnk
+    FROM certification_counts
+    WHERE count_of_cert_held_by_emp >= 5 AND level = 'entry'
+)
+SELECT
+    department,
+    certificate_name,
+    count_of_cert_held_by_emp,
+    avg_innovation_score
+FROM ranked_certs
+WHERE rnk = 1
+ORDER BY avg_innovation_score DESC;
+
+
+---
+
+
+"Q8:"
