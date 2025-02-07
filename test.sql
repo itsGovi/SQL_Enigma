@@ -1,33 +1,32 @@
-WITH regional_and_dept_avg_util AS (
-    SELECT
-        region,
-        department,
-        ROUND(CAST(AVG(actual_utilization) AS NUMERIC), 2) AS reg_and_dept_avg_util
-    FROM employees
-    GROUP BY region, department
-),
-median_team_size AS (
-    SELECT
+/*
+For each region, identify the top 3 departments (with at least 10 employees)
+where the average training hours of entry‑level employees have not only
+exceeded the overall median training hours (computed over the past 3 years)
+but have also shown a consistent upward trend.
+*/
+WITH emp_count AS (
+SELECT
     region,
     department,
-    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY avg_team_size) AS medain_team_size
-    FROM employees
-    GROUP BY region, department
+    AVG(training_hours) AS avg_emp_training_hours
+FROM employees
+WHERE level = 'entry'
+GROUP BY region, employee_id
+),
+rank_by_dept AS (
+    SELECT
+        RANK() OVER (PARTITION BY department ORDER BY avg_emp_training_hours DESC) AS rnk,
+        region,
+        COUNT(*) AS total_count,
+        avg_emp_training_hours
+    FROM emp_count
+    GROUP BY region, avg_emp_training_hours, department
 )
 SELECT
-    e.employee_id,
-    e.full_name,
-    e.region,
-    e.department,
-    ROUND(CAST(e.avg_team_size AS NUMERIC), 0) AS employee_team_size,
-    md.medain_team_size,
-    e.actual_utilization,
-    rd.reg_and_dept_avg_util
-FROM employees e
-JOIN regional_and_dept_avg_util rd
-    ON e.region = rd.region AND e.department = rd.department
-JOIN median_team_size md
-    ON e.region = md.region AND e.department = md.department
-WHERE e.avg_team_size > md.medain_team_size
-    AND e.active_projects >= 3
-    AND e.actual_utilization > rd.reg_and_dept_avg_util;
+    rnk,
+    region,
+    total_count,
+    avg_emp_training_hours
+FROM rank_by_dept
+    WHERE rnk <= 10
+    ORDER BY region, rnk
