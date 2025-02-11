@@ -15,7 +15,7 @@ GROUP BY region, employee_id
 ),
 rank_by_dept AS (
     SELECT
-        RANK() OVER (PARTITION BY department ORDER BY avg_emp_training_hours DESC) AS rnk,
+        DENSE_RANK() OVER (PARTITION BY department ORDER BY avg_emp_training_hours DESC) AS rnk,
         region,
         COUNT(*) AS total_count,
         avg_emp_training_hours
