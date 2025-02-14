@@ -1,0 +1,345 @@
+vehicle_age,vehicle_model,charging_station_location
+6,Nissan Leaf,Houston
+6,Hyundai Kona,San Francisco
+6,Nissan Leaf,Chicago
+6,Chevy Bolt,Chicago
+6,Nissan Leaf,Houston
+6,BMW i3,Chicago
+6,Hyundai Kona,Chicago
+6,Nissan Leaf,Los Angeles
+6,Hyundai Kona,Houston
+6,Nissan Leaf,Houston
+6,Nissan Leaf,Los Angeles
+6,Tesla Model 3,San Francisco
+6,BMW i3,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Nissan Leaf,New York
+6,Tesla Model 3,San Francisco
+6,BMW i3,San Francisco
+6,Chevy Bolt,Houston
+6,Hyundai Kona,New York
+6,Nissan Leaf,Chicago
+6,Chevy Bolt,San Francisco
+6,Hyundai Kona,New York
+6,Nissan Leaf,Los Angeles
+6,BMW i3,New York
+6,BMW i3,New York
+6,Chevy Bolt,Los Angeles
+6,Tesla Model 3,New York
+6,Chevy Bolt,San Francisco
+6,Tesla Model 3,New York
+6,Nissan Leaf,San Francisco
+6,Tesla Model 3,San Francisco
+6,BMW i3,San Francisco
+6,Hyundai Kona,New York
+6,Chevy Bolt,Houston
+6,Nissan Leaf,Chicago
+6,Tesla Model 3,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Tesla Model 3,Los Angeles
+6,Hyundai Kona,New York
+6,Chevy Bolt,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Chevy Bolt,Houston
+6,Tesla Model 3,Los Angeles
+6,Nissan Leaf,New York
+6,Hyundai Kona,Houston
+6,BMW i3,Los Angeles
+6,BMW i3,San Francisco
+6,Chevy Bolt,New York
+6,Tesla Model 3,San Francisco
+6,Nissan Leaf,Los Angeles
+6,BMW i3,Houston
+6,Chevy Bolt,San Francisco
+6,Tesla Model 3,Houston
+6,BMW i3,Houston
+6,BMW i3,Houston
+6,Hyundai Kona,Los Angeles
+6,Tesla Model 3,San Francisco
+6,Tesla Model 3,Chicago
+6,Nissan Leaf,Los Angeles
+6,BMW i3,Los Angeles
+6,Tesla Model 3,Houston
+6,BMW i3,Houston
+6,Hyundai Kona,Houston
+6,Hyundai Kona,Chicago
+6,Chevy Bolt,Chicago
+6,Nissan Leaf,San Francisco
+6,BMW i3,Los Angeles
+6,Hyundai Kona,New York
+6,Tesla Model 3,Los Angeles
+6,Chevy Bolt,San Francisco
+6,BMW i3,Los Angeles
+6,Chevy Bolt,Chicago
+6,Hyundai Kona,Chicago
+6,Nissan Leaf,Houston
+6,Nissan Leaf,Los Angeles
+6,Nissan Leaf,New York
+6,Chevy Bolt,Los Angeles
+6,Nissan Leaf,Houston
+6,Tesla Model 3,Los Angeles
+6,BMW i3,Houston
+6,Hyundai Kona,Chicago
+6,Nissan Leaf,Houston
+6,Hyundai Kona,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Chevy Bolt,Chicago
+6,Tesla Model 3,San Francisco
+6,BMW i3,Houston
+6,Hyundai Kona,Chicago
+6,Chevy Bolt,New York
+6,Chevy Bolt,New York
+6,Nissan Leaf,San Francisco
+6,Hyundai Kona,San Francisco
+6,BMW i3,New York
+6,Hyundai Kona,New York
+6,BMW i3,San Francisco
+6,Chevy Bolt,Houston
+6,Chevy Bolt,San Francisco
+6,Nissan Leaf,San Francisco
+6,BMW i3,Chicago
+6,BMW i3,New York
+6,Hyundai Kona,San Francisco
+6,Nissan Leaf,Los Angeles
+6,Hyundai Kona,Los Angeles
+6,Chevy Bolt,Chicago
+6,Chevy Bolt,San Francisco
+6,BMW i3,New York
+6,BMW i3,New York
+6,Nissan Leaf,Los Angeles
+6,BMW i3,Los Angeles
+6,Tesla Model 3,Chicago
+6,Nissan Leaf,Houston
+6,Chevy Bolt,Houston
+6,Nissan Leaf,Chicago
+6,Hyundai Kona,Houston
+6,Tesla Model 3,New York
+6,BMW i3,Chicago
+6,Tesla Model 3,New York
+6,Hyundai Kona,San Francisco
+6,BMW i3,New York
+6,BMW i3,San Francisco
+6,Nissan Leaf,San Francisco
+6,Nissan Leaf,Houston
+6,Hyundai Kona,New York
+6,Tesla Model 3,Los Angeles
+6,BMW i3,Chicago
+6,Nissan Leaf,Los Angeles
+6,Chevy Bolt,Houston
+6,BMW i3,Houston
+6,BMW i3,Houston
+6,Tesla Model 3,Chicago
+6,Tesla Model 3,New York
+6,BMW i3,Chicago
+6,Nissan Leaf,New York
+6,Hyundai Kona,San Francisco
+6,Hyundai Kona,New York
+6,Nissan Leaf,Chicago
+6,BMW i3,Los Angeles
+6,Chevy Bolt,New York
+6,Hyundai Kona,Los Angeles
+6,Tesla Model 3,Chicago
+6,Tesla Model 3,New York
+6,Tesla Model 3,Los Angeles
+6,Nissan Leaf,Chicago
+6,Hyundai Kona,Los Angeles
+6,Tesla Model 3,Chicago
+6,Nissan Leaf,San Francisco
+6,Hyundai Kona,Chicago
+6,Tesla Model 3,Houston
+6,Chevy Bolt,Houston
+6,Nissan Leaf,Chicago
+6,Hyundai Kona,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Tesla Model 3,San Francisco
+6,Nissan Leaf,San Francisco
+6,Hyundai Kona,Houston
+6,Tesla Model 3,New York
+6,Chevy Bolt,Los Angeles
+6,Tesla Model 3,San Francisco
+6,Tesla Model 3,Chicago
+6,BMW i3,Houston
+6,Chevy Bolt,New York
+6,Nissan Leaf,Los Angeles
+6,BMW i3,San Francisco
+6,Chevy Bolt,Los Angeles
+6,Chevy Bolt,Los Angeles
+6,Tesla Model 3,Los Angeles
+6,Chevy Bolt,Chicago
+6,Tesla Model 3,Chicago
+6,Tesla Model 3,New York
+6,BMW i3,Los Angeles
+7,Nissan Leaf,New York
+7,BMW i3,New York
+7,Tesla Model 3,Los Angeles
+7,BMW i3,Chicago
+7,Nissan Leaf,Houston
+7,BMW i3,Chicago
+7,BMW i3,Houston
+7,BMW i3,Los Angeles
+7,Hyundai Kona,Los Angeles
+7,Chevy Bolt,San Francisco
+7,Tesla Model 3,San Francisco
+7,Nissan Leaf,Los Angeles
+7,Tesla Model 3,New York
+7,Nissan Leaf,Los Angeles
+7,Tesla Model 3,Chicago
+7,Hyundai Kona,Houston
+7,Chevy Bolt,Los Angeles
+7,Chevy Bolt,Chicago
+7,BMW i3,Houston
+7,BMW i3,Los Angeles
+7,BMW i3,Houston
+7,Nissan Leaf,Houston
+7,Chevy Bolt,New York
+7,Tesla Model 3,San Francisco
+7,BMW i3,San Francisco
+7,Hyundai Kona,Houston
+7,Chevy Bolt,Los Angeles
+7,Chevy Bolt,Los Angeles
+7,Nissan Leaf,New York
+7,Tesla Model 3,Houston
+7,Nissan Leaf,Houston
+7,Chevy Bolt,San Francisco
+7,Tesla Model 3,Los Angeles
+7,Chevy Bolt,San Francisco
+7,BMW i3,New York
+7,Tesla Model 3,Houston
+7,Hyundai Kona,Los Angeles
+7,Chevy Bolt,New York
+7,Nissan Leaf,Chicago
+7,Tesla Model 3,San Francisco
+7,BMW i3,Houston
+7,Hyundai Kona,San Francisco
+7,Hyundai Kona,New York
+7,BMW i3,Chicago
+7,Tesla Model 3,New York
+7,Chevy Bolt,Los Angeles
+7,Chevy Bolt,New York
+7,Hyundai Kona,Chicago
+7,Nissan Leaf,Chicago
+7,Hyundai Kona,New York
+7,BMW i3,Los Angeles
+7,Chevy Bolt,Los Angeles
+7,BMW i3,Houston
+7,BMW i3,New York
+7,Hyundai Kona,San Francisco
+7,Hyundai Kona,Chicago
+7,Hyundai Kona,Houston
+7,Chevy Bolt,Los Angeles
+7,Nissan Leaf,Houston
+7,Tesla Model 3,Los Angeles
+7,BMW i3,New York
+7,Hyundai Kona,Los Angeles
+7,BMW i3,San Francisco
+7,Chevy Bolt,Chicago
+7,BMW i3,Chicago
+7,Nissan Leaf,New York
+7,Tesla Model 3,Houston
+7,Hyundai Kona,New York
+7,Nissan Leaf,Houston
+7,Tesla Model 3,New York
+7,Chevy Bolt,Los Angeles
+7,Tesla Model 3,Houston
+7,Chevy Bolt,Los Angeles
+7,BMW i3,Los Angeles
+7,Chevy Bolt,New York
+7,BMW i3,Los Angeles
+7,Nissan Leaf,New York
+7,Hyundai Kona,San Francisco
+7,Chevy Bolt,Los Angeles
+7,BMW i3,Houston
+7,BMW i3,San Francisco
+7,Hyundai Kona,Los Angeles
+7,BMW i3,Houston
+7,BMW i3,Chicago
+7,Tesla Model 3,San Francisco
+7,Hyundai Kona,San Francisco
+7,BMW i3,San Francisco
+7,BMW i3,San Francisco
+7,Tesla Model 3,New York
+7,Chevy Bolt,Chicago
+7,Nissan Leaf,Los Angeles
+7,Nissan Leaf,New York
+7,Tesla Model 3,New York
+7,Tesla Model 3,New York
+7,Tesla Model 3,San Francisco
+7,Tesla Model 3,Houston
+7,Nissan Leaf,Chicago
+7,Tesla Model 3,New York
+7,BMW i3,New York
+7,Chevy Bolt,Chicago
+7,BMW i3,New York
+7,Hyundai Kona,Chicago
+7,Nissan Leaf,Houston
+7,Hyundai Kona,New York
+7,BMW i3,Los Angeles
+7,Chevy Bolt,New York
+7,Chevy Bolt,Chicago
+7,Tesla Model 3,Chicago
+7,Nissan Leaf,Los Angeles
+7,Hyundai Kona,New York
+7,Chevy Bolt,Chicago
+7,BMW i3,Chicago
+7,Nissan Leaf,Chicago
+7,Nissan Leaf,San Francisco
+7,Nissan Leaf,Chicago
+7,Hyundai Kona,Los Angeles
+7,Tesla Model 3,Los Angeles
+7,Hyundai Kona,Houston
+7,Hyundai Kona,New York
+7,Chevy Bolt,New York
+7,Tesla Model 3,Los Angeles
+7,Tesla Model 3,Chicago
+7,Chevy Bolt,Chicago
+7,Tesla Model 3,San Francisco
+7,Tesla Model 3,New York
+7,BMW i3,Chicago
+7,Chevy Bolt,Los Angeles
+7,BMW i3,Los Angeles
+7,BMW i3,Houston
+7,Chevy Bolt,Los Angeles
+7,Chevy Bolt,New York
+7,BMW i3,Chicago
+7,BMW i3,Houston
+7,Tesla Model 3,New York
+7,Hyundai Kona,Houston
+7,Chevy Bolt,Los Angeles
+7,Nissan Leaf,Chicago
+7,Chevy Bolt,Houston
+7,Tesla Model 3,New York
+7,Tesla Model 3,New York
+7,Hyundai Kona,San Francisco
+7,Nissan Leaf,Houston
+7,Nissan Leaf,Los Angeles
+7,Chevy Bolt,Chicago
+7,Chevy Bolt,Houston
+7,Tesla Model 3,New York
+7,Chevy Bolt,Houston
+7,BMW i3,Houston
+7,Chevy Bolt,New York
+7,BMW i3,San Francisco
+7,Chevy Bolt,New York
+7,Hyundai Kona,Houston
+7,Hyundai Kona,Houston
+7,Tesla Model 3,Los Angeles
+7,BMW i3,New York
+7,Nissan Leaf,Chicago
+7,Hyundai Kona,San Francisco
+7,Chevy Bolt,New York
+7,Nissan Leaf,San Francisco
+7,Tesla Model 3,San Francisco
+7,BMW i3,New York
+7,Nissan Leaf,Chicago
+7,Tesla Model 3,Houston
+7,Tesla Model 3,New York
+7,Chevy Bolt,San Francisco
+7,Nissan Leaf,Houston
+7,Tesla Model 3,San Francisco
+7,Nissan Leaf,New York
+7,Tesla Model 3,Los Angeles
+8,Hyundai Kona,Los Angeles
+9,Nissan Leaf,Los Angeles
+10,Chevy Bolt,San Francisco
+10,Hyundai Kona,Los Angeles
+11,BMW i3,New York

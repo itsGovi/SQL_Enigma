@@ -1,0 +1,891 @@
+charger_type,vehicle_model,charging_station_location
+Level 1,BMW i3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,BMW i3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,Hyundai Kona,Chicago
+Level 1,BMW i3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Nissan Leaf,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Tesla Model 3,Chicago
+Level 1,Chevy Bolt,Chicago
+Level 1,Nissan Leaf,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,BMW i3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,BMW i3,Houston
+Level 1,BMW i3,Houston
+Level 1,BMW i3,Houston
+Level 1,BMW i3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,BMW i3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,BMW i3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,BMW i3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Tesla Model 3,Houston
+Level 1,BMW i3,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,BMW i3,Houston
+Level 1,Chevy Bolt,Houston
+Level 1,Nissan Leaf,Houston
+Level 1,BMW i3,Houston
+Level 1,BMW i3,Houston
+Level 1,Hyundai Kona,Houston
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Nissan Leaf,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,BMW i3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Tesla Model 3,Los Angeles
+Level 1,Hyundai Kona,Los Angeles
+Level 1,Chevy Bolt,Los Angeles
+Level 1,Chevy Bolt,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Hyundai Kona,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,BMW i3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,New York
+Level 1,Chevy Bolt,New York
+Level 1,Nissan Leaf,New York
+Level 1,Tesla Model 3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Nissan Leaf,New York
+Level 1,Chevy Bolt,New York
+Level 1,Chevy Bolt,New York
+Level 1,Hyundai Kona,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,New York
+Level 1,Hyundai Kona,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,BMW i3,New York
+Level 1,BMW i3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Nissan Leaf,New York
+Level 1,Tesla Model 3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Nissan Leaf,New York
+Level 1,Chevy Bolt,New York
+Level 1,Tesla Model 3,New York
+Level 1,Chevy Bolt,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,New York
+Level 1,Nissan Leaf,New York
+Level 1,Tesla Model 3,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,New York
+Level 1,Nissan Leaf,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,BMW i3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Hyundai Kona,New York
+Level 1,Nissan Leaf,New York
+Level 1,Nissan Leaf,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,BMW i3,New York
+Level 1,BMW i3,New York
+Level 1,Hyundai Kona,New York
+Level 1,BMW i3,New York
+Level 1,Tesla Model 3,New York
+Level 1,BMW i3,New York
+Level 1,Nissan Leaf,New York
+Level 1,Chevy Bolt,New York
+Level 1,Tesla Model 3,New York
+Level 1,BMW i3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Chevy Bolt,New York
+Level 1,Chevy Bolt,New York
+Level 1,Tesla Model 3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Nissan Leaf,New York
+Level 1,Nissan Leaf,New York
+Level 1,Chevy Bolt,New York
+Level 1,BMW i3,New York
+Level 1,Tesla Model 3,New York
+Level 1,Nissan Leaf,New York
+Level 1,BMW i3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,New York
+Level 1,Chevy Bolt,New York
+Level 1,Nissan Leaf,New York
+Level 1,Hyundai Kona,New York
+Level 1,Nissan Leaf,New York
+Level 1,Chevy Bolt,New York
+Level 1,Tesla Model 3,New York
+Level 1,Hyundai Kona,New York
+Level 1,Hyundai Kona,New York
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,BMW i3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Hyundai Kona,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Tesla Model 3,San Francisco
+Level 1,Nissan Leaf,San Francisco
+Level 1,Chevy Bolt,San Francisco
+Level 1,BMW i3,San Francisco
+Level 2,Nissan Leaf,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Hyundai Kona,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Tesla Model 3,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,Nissan Leaf,Chicago
+Level 2,BMW i3,Chicago
+Level 2,Chevy Bolt,Chicago
+Level 2,Chevy Bolt,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,BMW i3,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,BMW i3,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,BMW i3,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,BMW i3,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,BMW i3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,BMW i3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,BMW i3,Houston
+Level 2,BMW i3,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,BMW i3,Houston
+Level 2,Tesla Model 3,Houston
+Level 2,Chevy Bolt,Houston
+Level 2,Hyundai Kona,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Houston
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Hyundai Kona,Los Angeles
+Level 2,BMW i3,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Chevy Bolt,Los Angeles
+Level 2,Tesla Model 3,Los Angeles
+Level 2,Nissan Leaf,Los Angeles
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,Tesla Model 3,New York
+Level 2,Hyundai Kona,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Tesla Model 3,New York
+Level 2,BMW i3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Tesla Model 3,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Hyundai Kona,New York
+Level 2,Nissan Leaf,New York
+Level 2,BMW i3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,BMW i3,New York
+Level 2,Chevy Bolt,New York
+Level 2,BMW i3,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Hyundai Kona,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,Hyundai Kona,New York
+Level 2,Hyundai Kona,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Tesla Model 3,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Tesla Model 3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Tesla Model 3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Chevy Bolt,New York
+Level 2,Tesla Model 3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Chevy Bolt,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,BMW i3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Chevy Bolt,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Chevy Bolt,New York
+Level 2,Tesla Model 3,New York
+Level 2,BMW i3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,Hyundai Kona,New York
+Level 2,Hyundai Kona,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,Tesla Model 3,New York
+Level 2,Chevy Bolt,New York
+Level 2,BMW i3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Tesla Model 3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Nissan Leaf,New York
+Level 2,Nissan Leaf,New York
+Level 2,Chevy Bolt,New York
+Level 2,Chevy Bolt,New York
+Level 2,Tesla Model 3,New York
+Level 2,Tesla Model 3,New York
+Level 2,Chevy Bolt,New York
+Level 2,Chevy Bolt,New York
+Level 2,BMW i3,New York
+Level 2,Hyundai Kona,New York
+Level 2,Nissan Leaf,New York
+Level 2,BMW i3,New York
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Hyundai Kona,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,BMW i3,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Nissan Leaf,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Chevy Bolt,San Francisco
+Level 2,Tesla Model 3,San Francisco
+Level 2,Nissan Leaf,San Francisco
