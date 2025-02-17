@@ -5,3 +5,5 @@ ensure that thecertification has been obtained by at least 5 employees
 to avoid skewed results. Return the certification name, department,
 avg_innovation_score sorted in descending order of innovation score.
 */
+SELECT *
+FROM employees

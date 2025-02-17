@@ -269,3 +269,37 @@ ORDER BY avg_innovation_score DESC;
 
 
 "Q8:"
+
+WITH emp_count AS (
+SELECT
+    region,
+    department,
+    AVG(training_hours) AS avg_emp_training_hours
+FROM employees
+WHERE level = 'entry'
+GROUP BY region, employee_id
+),
+rank_by_dept AS (
+    SELECT
+        DENSE_RANK() OVER (PARTITION BY department ORDER BY avg_emp_training_hours DESC) AS rnk,
+        region,
+        COUNT(*) AS total_count,
+        avg_emp_training_hours
+    FROM emp_count
+    GROUP BY region, avg_emp_training_hours, department
+)
+SELECT
+    rnk,
+    region,
+    total_count,
+    avg_emp_training_hours
+FROM rank_by_dept
+    WHERE rnk <= 10
+    ORDER BY region, rnk;
+
+
+---
+
+
+"Q9:"
+

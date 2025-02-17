@@ -21,7 +21,7 @@ SELECT
     charging_station_location
 FROM ev_charging_patterns
 WHERE charger_type = 'Level 1' OR charger_type = 'Level 2'
-ORDER BY charger_type, charging_station_location
+ORDER BY charger_type, charging_station_location;
 
 SELECT
     charger_type,
