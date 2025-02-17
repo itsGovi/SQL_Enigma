@@ -19,7 +19,6 @@
     Additionally, only consider regions where at least 5 Client Services employees have contributed to the revenue calculation (to avoid skewed results).
        Return the region and the total revenue, sorted in descending order of revenue.
 
-1. [ ] Display all employees in the APAC region with avg_project_duration exceeding the department average.
 2. [ ] Identify employees with flight_risk below 20 and span_of_control above 3.
 3. [ ] Rank employees by their avg_actual_utilization within their job levels, grouped by department.
 4. [ ] List employees whose knowledge_sharing_score is in the top 10% of their department.
@@ -31,7 +30,25 @@
 1. [ ] List the top 5 primary_specializations by avg_performance_score and compare them across regions.
 1. [ ] Identify employees with the highest flight_risk and their respective avg_training_hours.
 
-Here's an updated version of the question that maintains a realistic day‑to‑day analysis level—comparable to the certifications question you mentioned:
+* [ ] Identify employees in the **APAC region** whose **average project duration** exceeds both:
+
+  1. The **department average** across all regions.
+  2. The **regional median project duration** (specific to APAC).
+
+  Additionally, classify each employee into **tenure groups** based on their  **years of experience** :
+
+  * **0–2 years:** "Junior"
+  * **3–5 years:** "Mid-Level"
+  * **6+ years:** "Senior"
+
+  Ensure that:
+
+  * Use **window functions** to calculate department-level averages and regional medians.
+  * Use **recursive CTEs** to generate tenure groups dynamically.
+  * Exclude employees who have worked on **fewer than 3 projects** to filter out anomalies.
+
+  **Return:** Employee ID, Name, Department, Region, Avg_Project_Duration, Department_Avg_Duration, APAC_Regional_Median, Tenure_Group
+
 
 ---
 

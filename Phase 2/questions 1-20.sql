@@ -303,3 +303,18 @@ FROM rank_by_dept
 
 "Q9:"
 
+SELECT
+    region,
+    SUM(revenue) as total_revenue
+FROM employees
+WHERE department = 'Client Services'
+GROUP BY region
+HAVING COUNT(employee_id) >= 5
+ORDER BY total_revenue DESC;
+
+
+---
+
+
+"Q10:"
+
