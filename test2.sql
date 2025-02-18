@@ -16,3 +16,22 @@ Ensure that:
 
 **Return:** Employee ID, Name, Department, Region, Avg_Project_Duration, Department_Avg_Duration, APAC_Regional_Median, Tenure_Group
 */
+WITH employee_experience AS (
+    SELECT
+        region,
+        employee_id,
+        full_name,
+        date_part('year', age(hire_date)) AS experience_years
+    FROM employees
+    WHERE region = 'APAC'
+)
+SELECT
+    employee_id,
+    full_name,
+    CASE
+        WHEN experience_years BETWEEN 0 AND 2 THEN 'Junior'
+        WHEN experience_years BETWEEN 3 AND 5 THEN 'Mid-Level'
+        WHEN experience_years >= 6 THEN 'Senior'
+        ELSE 'Unknown'  -- Important: Handle other cases!
+    END AS experience_level
+FROM employee_experience;
