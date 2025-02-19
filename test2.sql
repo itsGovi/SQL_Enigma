@@ -1,37 +1,20 @@
 /*
-1. The **department average** across all regions.
-2. The **regional median project duration** (specific to APAC).
+* Identify employees with a **flight_risk** below 20 and **span_of_control** above 3. Then, for each department, do the following:
 
-Additionally, classify each employee into **tenure groups** based on their  **years of experience** :
+1. **Department-Level Aggregation:**
+   * Compute the **median flight_risk** and **average span_of_control** for each department.
+2. **Advanced Filtering:**
+   * From the employees meeting the initial conditions, further filter to include only those whose:
+     * **flight_risk** is not only below 20 but also at least 10% lower than the department’s median flight_risk, and
+     * **span_of_control** is not only above 3 but also at least 10% higher than the department’s average span_of_control.
+3. **Ranking Within Departments:**
+   * Rank the filtered employees in each department using a window function, ordering by:
+     * The largest deviation below the department median for flight risk, and then
+     * The largest deviation above the department average for span of control.
+   * Return only the **top 3 employees per department** based on this ranking.
+4. **Trigger Implementation (Advanced Bonus):**
+   * Design a trigger that automatically logs any new insertion into the employees table that meets the above criteria into a separate audit table (`employee_stability_audit`). The audit should record the employee ID, insertion timestamp, and a summary of the key metrics (flight_risk, span_of_control, and the calculated deviations).
 
-* **0–2 years:** "Junior"
-* **3–5 years:** "Mid-Level"
-* **6+ years:** "Senior"
-
-Ensure that:
-
-* Use **window functions** to calculate department-level averages and regional medians.
-* Use **recursive CTEs** to generate tenure groups dynamically.
-* Exclude employees who have worked on **fewer than 3 projects** to filter out anomalies.
-
-**Return:** Employee ID, Name, Department, Region, Avg_Project_Duration, Department_Avg_Duration, APAC_Regional_Median, Tenure_Group
+**Return:**
+Employee ID, full_name, department, flight_risk, span_of_control, department median flight_risk, department average span_of_control, and the employee’s rank within their department.
 */
-WITH employee_experience AS (
-    SELECT
-        region,
-        employee_id,
-        full_name,
-        date_part('year', age(hire_date)) AS experience_years
-    FROM employees
-    WHERE region = 'APAC'
-)
-SELECT
-    employee_id,
-    full_name,
-    CASE
-        WHEN experience_years BETWEEN 0 AND 2 THEN 'Junior'
-        WHEN experience_years BETWEEN 3 AND 5 THEN 'Mid-Level'
-        WHEN experience_years >= 6 THEN 'Senior'
-        ELSE 'Unknown'  -- Important: Handle other cases!
-    END AS experience_level
-FROM employee_experience;

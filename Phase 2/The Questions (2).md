@@ -19,8 +19,7 @@
     Additionally, only consider regions where at least 5 Client Services employees have contributed to the revenue calculation (to avoid skewed results).
        Return the region and the total revenue, sorted in descending order of revenue.
 
-2. [ ] Identify employees with flight_risk below 20 and span_of_control above 3.
-3. [ ] Rank employees by their avg_actual_utilization within their job levels, grouped by department.
+3. [ ] 
 4. [ ] List employees whose knowledge_sharing_score is in the top 10% of their department.
 5. [ ] Compute the percentage of employees in each specialization with more than one certification.
 6. [ ] Identify departments with the smallest gaps between utilization_target and actual_utilization.
@@ -29,6 +28,29 @@
 9. [ ] Find employees with direct_reports exceeding 5 and avg_project_satisfaction below 70.
 1. [ ] List the top 5 primary_specializations by avg_performance_score and compare them across regions.
 1. [ ] Identify employees with the highest flight_risk and their respective avg_training_hours.
+
+* [ ] **Advanced Utilization Ranking and Gap Analysis**
+
+    Within each department, perform the following for each job level:
+
+1. **Ranking:**
+   Rank employees by their `avg_actual_utilization` (in descending order) using window functions, partitioned by both department and job level.
+2. **Gap Calculation:**
+   For each employee, compute a **utilization gap** defined as the difference between the maximum `avg_actual_utilization` in their department/job level group and their own `avg_actual_utilization`.
+3. **Percentage Gap:**
+   Calculate the **percentage gap** relative to the departmental maximum (i.e., `(max_utilization - employee_utilization) / max_utilization * 100`).
+4. **Filtering Near-Top Performers:**
+   Return only those employees whose **percentage gap** is less than or equal to 10%, highlighting near-top performers in their respective job levels.
+5. **Final Output:**
+   Return the following columns:
+   * `employee_id`
+   * `full_name`
+   * `department`
+   * `job_level`
+   * `avg_actual_utilization`
+   * `rank` (within department & job level)
+   * `utilization_gap`
+   * `percentage_gap`
 
 * [X] Identify employees in the **APAC region** whose **average project duration** exceeds both:
 
@@ -48,24 +70,39 @@
   * Exclude employees who have worked on **fewer than 3 projects** to filter out anomalies.
 
   **Return:** Employee ID, Name, Department, Region, Avg_Project_Duration, Department_Avg_Duration, APAC_Regional_Median, Tenure_Group.
-* [ ] Identify employees with a **flight_risk** below 20 and **span_of_control** above 3. Then, for each department, do the following:
+* [ ] **Advanced Employee Stability & Leadership Ranking**
 
-1. **Department-Level Aggregation:**
-   * Compute the **median flight_risk** and **average span_of_control** for each department.
-2. **Advanced Filtering:**
-   * From the employees meeting the initial conditions, further filter to include only those whose:
-     * **flight_risk** is not only below 20 but also at least 10% lower than the department’s median flight_risk, and
-     * **span_of_control** is not only above 3 but also at least 10% higher than the department’s average span_of_control.
-3. **Ranking Within Departments:**
-   * Rank the filtered employees in each department using a window function, ordering by:
-     * The largest deviation below the department median for flight risk, and then
-     * The largest deviation above the department average for span of control.
-   * Return only the **top 3 employees per department** based on this ranking.
-4. **Trigger Implementation (Advanced Bonus):**
-   * Design a trigger that automatically logs any new insertion into the employees table that meets the above criteria into a separate audit table (`employee_stability_audit`). The audit should record the employee ID, insertion timestamp, and a summary of the key metrics (flight_risk, span_of_control, and the calculated deviations).
+  1. **Base Filter:**
+     Identify employees with:
+     * `flight_risk` below 20
+     * `span_of_control` above 3
+  2. **Department-Level Metrics:**
+     For each department, calculate:
+     * The **median flight_risk**
+     * The **average span_of_control**
+  3. **Relative Performance Calculation:**
+     For each employee from the base filter:
+     * Compute the  **flight risk deviation** :
+       deviationrisk=department median flight risk−employee flight riskdepartment median flight risk\text{deviation}_{\text{risk}} = \frac{\text{department median flight risk} - \text{employee flight risk}}{\text{department median flight risk}}**deviation**risk=**department median flight risk**department median flight risk**−**employee flight risk****
+     * Compute the  **span of control deviation** :
+       deviationspan=employee span of control−department average span of controldepartment average span of control\text{deviation}_{\text{span}} = \frac{\text{employee span of control} - \text{department average span of control}}{\text{department average span of control}}**deviation**span=**department average span of control**employee span of control**−**department average span of control****
+     * Optionally, calculate a **composite score** (e.g., by summing the two deviations or using a weighted average).
+  4. **Ranking:**
+     Within each department, rank the employees by the composite score (with higher scores indicating significantly lower flight risk and significantly higher span of control relative to their department's benchmarks).
+  5. **Final Output:**
+     Return the top 3 employees per department, including:
+     * Employee ID
+     * Full Name
+     * Department
+     * Flight Risk
+     * Span of Control
+     * Department Median Flight Risk
+     * Department Average Span of Control
+     * Computed deviations (or composite score)
+     * Their rank within the department
 
-**Return:**
-Employee ID, full_name, department, flight_risk, span_of_control, department median flight_risk, department average span_of_control, and the employee’s rank within their department.
+  **Return:**
+  A result set sorted by department and rank.
 
 ---
 
