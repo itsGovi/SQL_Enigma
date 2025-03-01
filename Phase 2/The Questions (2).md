@@ -19,7 +19,6 @@
     Additionally, only consider regions where at least 5 Client Services employees have contributed to the revenue calculation (to avoid skewed results).
        Return the region and the total revenue, sorted in descending order of revenue.
 
-3. [ ] 
 4. [ ] List employees whose knowledge_sharing_score is in the top 10% of their department.
 5. [ ] Compute the percentage of employees in each specialization with more than one certification.
 6. [ ] Identify departments with the smallest gaps between utilization_target and actual_utilization.
@@ -29,9 +28,9 @@
 1. [ ] List the top 5 primary_specializations by avg_performance_score and compare them across regions.
 1. [ ] Identify employees with the highest flight_risk and their respective avg_training_hours.
 
-* [ ] **Advanced Utilization Ranking and Gap Analysis**
+* [X] **Advanced Utilization Ranking and Gap Analysis**
 
-    Within each department, perform the following for each job level:
+  Within each department, perform the following for each job level:
 
 1. **Ranking:**
    Rank employees by their `avg_actual_utilization` (in descending order) using window functions, partitioned by both department and job level.
@@ -103,6 +102,28 @@
 
   **Return:**
   A result set sorted by department and rank.
+* [ ] **Updated Question: Advanced Knowledge Sharing Analysis**
+
+1. **Department-Level Threshold Calculation:**
+   * For each department, compute the 90th percentile of the `knowledge_sharing_score` using a window function (e.g., `PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY knowledge_sharing_score)`) to establish a threshold.
+2. **Employee Filtering:**
+   * Identify employees whose `knowledge_sharing_score` exceeds their department’s 90th percentile threshold.
+3. **Composite Performance Metric:**
+   * For each qualifying employee, calculate a composite performance metric that combines their `knowledge_sharing_score` and a fraction of their `training_hours` (for example, `composite_metric = knowledge_sharing_score + 0.5 * training_hours`).
+4. **Ranking and Percentage Difference:**
+   * Rank these employees within their department by their `knowledge_sharing_score` in descending order.
+   * Additionally, compute the percentage difference between each employee’s score and the departmental 90th percentile threshold.
+5. **Final Output:**
+   * Return the following columns:
+     * `employee_id`
+     * `full_name`
+     * `department`
+     * `knowledge_sharing_score`
+     * `training_hours`
+     * `composite_metric`
+     * `rank` (within department)
+     * `percentage_difference` (i.e., how much higher the employee's score is compared to the threshold, expressed as a percentage)
+   * Sort the results by department and then by rank (with the highest performers first).
 
 ---
 
