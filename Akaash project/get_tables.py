@@ -22,53 +22,53 @@ def run_query_to_csv(query, output_csv):
         print(f"Error executing query: {e}")
 
 def main():
-    # Query 1: vehicle_age <= 5
+    # Query 1: vehicle_age > 5 AND charger_type = 'Level 1'
     query1 = """
-        SELECT 
-            vehicle_age,
-            vehicle_model,
-            charging_station_location
+        SELECT *
         FROM ev_charging_patterns
-        WHERE vehicle_age <= 5
-        ORDER BY vehicle_age ASC;
+        WHERE vehicle_age > 5 AND charger_type = 'Level 1';
     """
-    run_query_to_csv(query1, "results_vehicle_age_under_5.csv")
-    
-    # Query 2: vehicle_age > 5
+    run_query_to_csv(query1, "over5_level1.csv")
+
+    # Query 2: vehicle_age > 5 AND charger_type = 'Level 2'
     query2 = """
-        SELECT 
-            vehicle_age,
-            vehicle_model,
-            charging_station_location
+        SELECT *
         FROM ev_charging_patterns
-        WHERE vehicle_age > 5
-        ORDER BY vehicle_age ASC;
+        WHERE vehicle_age > 5 AND charger_type = 'Level 2';
     """
-    run_query_to_csv(query2, "results_vehicle_age_over_5.csv")
-    
-    # Query 3: Level 1 or Level 2 chargers
+    run_query_to_csv(query2, "over5_level2.csv")
+
+    # Query 3: vehicle_age > 5 AND charger_type = 'DC Fast Charger'
     query3 = """
-        SELECT
-            charger_type,
-            vehicle_model,
-            charging_station_location
+        SELECT *
         FROM ev_charging_patterns
-        WHERE charger_type IN ('Level 1', 'Level 2')
-        ORDER BY charger_type, charging_station_location;
+        WHERE vehicle_age > 5 AND charger_type = 'DC Fast Charger';
     """
-    run_query_to_csv(query3, "results_level_chargers.csv")
-    
-    # Query 4: DC Fast Charger
+    run_query_to_csv(query3, "over5_dc_fast.csv")
+
+    # Query 4: vehicle_age < 5 AND charger_type = 'Level 1'
     query4 = """
-        SELECT
-            charger_type,
-            vehicle_model,
-            charging_station_location
+        SELECT *
         FROM ev_charging_patterns
-        WHERE charger_type = 'DC Fast Charger'
-        ORDER BY charging_station_location;
+        WHERE vehicle_age < 5 AND charger_type = 'Level 1';
     """
-    run_query_to_csv(query4, "results_dc_fast_charger.csv")
+    run_query_to_csv(query4, "under5_level1.csv")
+
+    # Query 5: vehicle_age < 5 AND charger_type = 'Level 2'
+    query5 = """
+        SELECT *
+        FROM ev_charging_patterns
+        WHERE vehicle_age < 5 AND charger_type = 'Level 2';
+    """
+    run_query_to_csv(query5, "under5_level2.csv")
+
+    # Query 6: vehicle_age < 5 AND charger_type = 'DC Fast Charger'
+    query6 = """
+        SELECT *
+        FROM ev_charging_patterns
+        WHERE vehicle_age < 5 AND charger_type = 'DC Fast Charger';
+    """
+    run_query_to_csv(query6, "under5_dc_fast.csv")
 
 if __name__ == "__main__":
     main()
